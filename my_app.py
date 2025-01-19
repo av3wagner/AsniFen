@@ -25,8 +25,8 @@ import flask
 raw_df = pd.read_csv('data/heart.csv')
 DesktopWidth="1707px"
 DesktopHeight="960px"
-image_path = 'assets/WagnerFoto.jpg'
-Front_path = 'assets/Front.jpg'
+#image_path = 'assets/WagnerFoto.jpg'
+#Front_path = 'assets/Front.jpg'
 
 #Front_image = html.Img(src='assets/Front.jpg', style={"height":"200", "width":"150", 'padding-left':10,})
 #image = html.Img(src='assets/WagnerFoto.jpg', style={"height":"200", "width":"150", 'padding-left': 220,})
@@ -34,7 +34,35 @@ def b64_image(image_filename):
     with open(image_filename, 'rb') as f:
         image = f.read()
     return 'data:image/png;base64,' + base64.b64encode(image).decode('utf-8')
+    
+colors = {
+    'background': '#4A235A',
+    'background2': 'black',
+    'text': 'yellow'
+}
 
+colors = ['red', '#9C0C38', 'orange']
+tabs_styles = {"height": "30px"}
+
+tab_style = {
+    "borderBottom": "1px solid #d6d6d6",
+    "padding": "2px",
+    "fontWeight": "bold",
+    "vertical-align": "middle",
+    "backgroundColor": "#111111", 
+}
+
+tab_selected_style = {
+    "borderTop": "1px solid #d6d6d6",
+    "borderBottom": "1px solid #d6d6d6",
+    "backgroundColor": "#111111",
+    "color": "yellow",
+    "padding": "5px",
+    "font-size": 18,
+}
+
+DesktopWidth="1707px"
+DesktopHeight="960px"
 app = JupyterDash(external_stylesheets=[dbc.themes.SLATE])
 server=app.server
 #print(raw_df.head(10))
