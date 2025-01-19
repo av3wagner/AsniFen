@@ -81,6 +81,14 @@ app.layout = html.Div([
                 className='custom-tab',
                 selected_className='custom-tab--selected'
             ),
+            dcc.Tab(
+                label="Старт",
+                value="Table2",
+                style=tab_style,
+                selected_style=tab_selected_style,
+                className='custom-tab',
+                selected_className='custom-tab--selected'
+            ),
   ],
          style=tabs_styles,
          colors={"border": "yellow", "primary": "red",
@@ -107,6 +115,19 @@ def render_content(value):
                         "verticalAlign": "top"
                })
         ])
+
+elif tab == 'Table2':
+        return [html.Div([
+             html.H1('Демография', style={'textAlign': 'center', 'font-size': '42px', 'color': '#00BFFF'}),                
+             html.Div(className="six columns",
+                children=[
+                 )
+            ],style={'width':'95.0%','display':'inline-block','vertical-align':'middle',
+                     'border':'3px solid','marginLeft':16,'marginRight':0,'marginTop':0,
+                     'marginBottom':0, 'padding': '5px 0px 0px 0px'},
+          ),
+          
+       ])]
 
 if __name__ == '__main__':
     app.run(debug=False)
