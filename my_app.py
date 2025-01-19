@@ -115,19 +115,18 @@ def render_content(value):
                         "verticalAlign": "top"
                })
         ])
-
 elif tab == 'Table2':
         return [html.Div([
              html.H1('Демография', style={'textAlign': 'center', 'font-size': '42px', 'color': '#00BFFF'}),                
              html.Div(className="six columns",
-                children=[
-                 )
+                children=(
+                   html.H2('Тест', style={'textAlign': 'center', 'font-size': '30px', 'color': '#00BFFF'})  
+               )
             ],style={'width':'95.0%','display':'inline-block','vertical-align':'middle',
                      'border':'3px solid','marginLeft':16,'marginRight':0,'marginTop':0,
                      'marginBottom':0, 'padding': '5px 0px 0px 0px'},
           ),
-          
-       ])]
+        ]
 
 if __name__ == '__main__':
     app.run(debug=False)
