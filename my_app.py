@@ -19,8 +19,8 @@ import flask
 #import requests
 #from urllib.request import urlopen
 #from prophet import Prophet
-from pandas_datareader import data, wb
-import base64
+#from pandas_datareader import data, wb
+#import base64
 
 raw_df = pd.read_csv('data/heart.csv')
 app = JupyterDash(external_stylesheets=[dbc.themes.SLATE])
