@@ -1,9 +1,6 @@
 import pandas as pd
 from datetime import datetime
-import pandas as pd
-#import numpy as np
-#import sqlite3
-import dash
+#import dash
 from dash import dash_table
 from dash import dcc
 from dash import html
@@ -12,24 +9,14 @@ from dash.dependencies import Input, Output
 from dash import Dash, dcc, html, Input, Output, State, callback
 import plotly.express as px
 import plotly.graph_objects as go
-#import chart_studio.plotly as py 
 from jupyter_dash import JupyterDash
 import flask
-#import json
-#import requests
-#from urllib.request import urlopen
-#from prophet import Prophet
-#from pandas_datareader import data, wb
-#import base64
+import base64
 
 raw_df = pd.read_csv('data/heart.csv')
 DesktopWidth="1707px"
 DesktopHeight="960px"
-#image_path = 'assets/WagnerFoto.jpg'
-#Front_path = 'assets/Front.jpg'
 
-#Front_image = html.Img(src='assets/Front.jpg', style={"height":"200", "width":"150", 'padding-left':10,})
-#image = html.Img(src='assets/WagnerFoto.jpg', style={"height":"200", "width":"150", 'padding-left': 220,})
 def b64_image(image_filename):
     with open(image_filename, 'rb') as f:
         image = f.read()
@@ -65,7 +52,6 @@ DesktopWidth="1707px"
 DesktopHeight="960px"
 app = JupyterDash(external_stylesheets=[dbc.themes.SLATE])
 server=app.server
-#print(raw_df.head(10))
 app.title = "АСНИ-МЕД Dashboard"
 app.layout = html.Div([
   dcc.Tabs(id="tabs-with-classes", 
@@ -115,14 +101,12 @@ def render_content(value):
                         "verticalAlign": "top"
                })
         ])
-elif tab == 'Table2':
+        
+    elif tab == 'Table2':
+        print(raw_df.head(10))
         return [html.Div([
              html.H1('Демография', style={'textAlign': 'center', 'font-size': '42px', 'color': '#00BFFF'}),                
-             html.Div(className="six columns",
-                children=(
-                   html.H2('Тест', style={'textAlign': 'center', 'font-size': '30px', 'color': '#00BFFF'})  
-               )
-            ],style={'width':'95.0%','display':'inline-block','vertical-align':'middle',
+             ],style={'width':'95.0%','display':'inline-block','vertical-align':'middle',
                      'border':'3px solid','marginLeft':16,'marginRight':0,'marginTop':0,
                      'marginBottom':0, 'padding': '5px 0px 0px 0px'},
           ),
