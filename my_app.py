@@ -28,8 +28,8 @@ DesktopHeight="960px"
 image_path = 'assets/WagnerFoto.jpg'
 Front_path = 'assets/Front.jpg'
 
-Front_image = html.Img(src='assets/Front.jpg', style={"height":"200", "width":"150", 'padding-left':10,})
-image = html.Img(src='assets/WagnerFoto.jpg', style={"height":"200", "width":"150", 'padding-left': 220,})
+#Front_image = html.Img(src='assets/Front.jpg', style={"height":"200", "width":"150", 'padding-left':10,})
+#image = html.Img(src='assets/WagnerFoto.jpg', style={"height":"200", "width":"150", 'padding-left': 220,})
 def b64_image(image_filename):
     with open(image_filename, 'rb') as f:
         image = f.read()
@@ -47,7 +47,7 @@ app.layout = html.Div([
         children=[
             dcc.Tab(
                 label="Титул-лист системы",
-                value="Table11",
+                value="Table1",
                 style=tab_style,
                 selected_style=tab_selected_style,
                 className='custom-tab',
@@ -65,7 +65,7 @@ app.layout = html.Div([
               Input('tabs-with-classes', 'value'))
 def render_content(value): 
     tab=value
-    if tab == 'Table11':
+    if tab == 'Table1':
         return html.Div([
                html.Img(src=b64_image('Image/Front4.jpg'),
                         style={
