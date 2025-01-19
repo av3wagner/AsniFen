@@ -1,5 +1,5 @@
 # Core
-dash>=0.35.2
+dash>=2.11.1
 dash-auth>=1.1.2
 dash-html-components>=0.13.5
 dash-core-components>=0.43.0
@@ -12,4 +12,10 @@ scipy>=1.2.1
 numpy>=1.16.1
 pandas>=0.24.1
 dash-player>=0.0.1
-
+chart-studio>=1.1.0
+dash_bootstrap_components>=1.4.2
+flask>=2.2.2
+jupyter_dash>=0.4.2
+plotly>=5.16.0
+requests>=2.31.0
+urllib3>=1.26.16
