@@ -66,7 +66,7 @@ DesktopHeight="960px"
 app = JupyterDash(external_stylesheets=[dbc.themes.SLATE])
 server=app.server
 #print(raw_df.head(10))
-app.title = "Kazakhstan Dashboard"
+app.title = "АСНИ-МЕД Dashboard"
 app.layout = html.Div([
   dcc.Tabs(id="tabs-with-classes", 
               value='Table11', 
