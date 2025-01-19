@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime
 import pandas as pd
 #import numpy as np
-import sqlite3
+#import sqlite3
 import dash
 from dash import dash_table
 from dash import dcc
@@ -12,12 +12,12 @@ from dash.dependencies import Input, Output
 from dash import Dash, dcc, html, Input, Output, State, callback
 import plotly.express as px
 import plotly.graph_objects as go
-import chart_studio.plotly as py 
+#import chart_studio.plotly as py 
 from jupyter_dash import JupyterDash
 import flask
 #import json
 #import requests
-from urllib.request import urlopen
+#from urllib.request import urlopen
 #from prophet import Prophet
 from pandas_datareader import data, wb
 import base64
