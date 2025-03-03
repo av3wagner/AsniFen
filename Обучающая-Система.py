@@ -158,8 +158,8 @@ __Берлин, 16\.02\.2025__
 with open("/mount/src/asnifen/WagnerFoto.jpg", "rb") as img_file:    
         img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
-with open("/mount/src/asnifen/ASFEN_LOGO3.png", "rb") as img_file:
-        img2 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()        
+#with open("/mount/src/asnifen/ASFEN_LOGO3.png", "rb") as img_file:
+#        img2 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()        
 
 
 def MdFileToStreamlit(MdFile):
