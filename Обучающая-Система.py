@@ -155,10 +155,10 @@ __*Материалы этого проекта могут служить хор
 __Берлин, 16\.02\.2025__
 '''
 
-with open("WagnerFoto.jpg", "rb") as img_file:    
+with open("/mount/src/asnifen/WagnerFoto.jpg", "rb") as img_file:    
         img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
-with open("data/ASFEN_LOGO3.png", "rb") as img_file:
+with open("/mount/src/asnifen/data/ASFEN_LOGO3.png", "rb") as img_file:
         img2 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()        
 
 
