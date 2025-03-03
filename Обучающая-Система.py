@@ -154,8 +154,8 @@ __*Материалы этого проекта могут служить хор
 
 __Берлин, 16\.02\.2025__
 '''
-#C:/IPYNBgesamt2025/ASNI-FEN/ASNI-FEN-SYSTEM/
-with open("data/WagnerFoto.jpg ", "rb") as img_file:    
+
+with open("WagnerFoto.jpg ", "rb") as img_file:    
         img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
 with open("data/ASFEN_LOGO3.png", "rb") as img_file:
