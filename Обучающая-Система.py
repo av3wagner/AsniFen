@@ -158,25 +158,6 @@ __Берлин, 16\.02\.2025__
 with open("/mount/src/asnifen/WagnerFoto.jpg", "rb") as img_file:    
     img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
-with open("/mount/src/asnifen/ASFEN_LOGO3.png", "rb") as img_file:
-    img2 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()  
-
-def MdFileToStreamlit(MdFile):
-    with open(MdFile, 'r', encoding='utf-8') as f:
-        readme_line = f.readlines()
-        readme_buffer = []
-        resource_files = [os.path.basename(x) for x in glob.glob(f'Resources/*')]
-
-    for line in readme_line :
-        readme_buffer.append(line) 
-        for image in resource_files:
-            if image in line:
-                st.markdown(''.join(readme_buffer[:-1])) 
-                st.image(f'Resources/{image}')
-                readme_buffer.clear()
-
-    st.markdown(''.join(readme_buffer))    
-
 def ASNISystem(): 
     col1, col2, col3 = st.columns( [1, 20, 1])
     with col2:  
@@ -234,7 +215,7 @@ def welcome():
         unsafe_allow_html=True)
                 
         st.markdown("")
-        MdFileToStreamlit("assets/AWresume.md")
+        #MdFileToStreamlit("assets/AWresume.md")
         
     with col3:              
         st.markdown(""" <style> .font {
@@ -256,7 +237,7 @@ with col2:
                     <div class="spin-container">
                         <div class="shape">
                             <div class="bd">
-                                <img src="{img2}" alt="AW" width="600" height="400" style="display: block; margin: auto">
+                                <img src="{img1}" alt="AW" width="600" height="400" style="display: block; margin: auto">
                             </div>
                         </div>
                     </div>
