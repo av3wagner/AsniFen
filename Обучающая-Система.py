@@ -230,22 +230,6 @@ with col2:
     st.markdown(f'<h1 style="color:yellow;font-size:28px;text-align:center">{"Автоматизировання Обучающая Система Научных Исследований в медицине и здравоохранении «АСНИ-Обучение»"}</h1>', unsafe_allow_html=True)
     st.markdown(f'<h2 style="color:white;font-size:24px;text-align:center">{"Система для любознательных и настойчивых"}</h2>', unsafe_allow_html=True)
     st.markdown("")
-        
-    st.write(f"""
-            <div class="container">
-                <div class="box">
-                    <div class="spin-container">
-                        <div class="shape">
-                            <div class="bd">
-                                <img src="{img1}" alt="AW" width="600" height="400" style="display: block; margin: auto">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            """, 
-    unsafe_allow_html=True)
-        
     st.title("Добро пожаловать в АСНИ-Обучение!")
     st.markdown("""
         АСНИ-Обучение - это система с открытым исходным кодом, помогающее пользователям применять избранные методы машинного обучения
