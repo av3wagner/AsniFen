@@ -34,7 +34,11 @@ def select_file():
     st.write(file_location)
     if file_location.find('.py') > 0:
         if st.button('Запустите EDA/ML-программу'):
-            execute_python_file(file_location)
+            #execute_python_file(file_location)
+            with open(file_location, 'r', encoding='utf-8') as file:
+                python_code = file.read()
+            exec(python_code)
+            
         if st.button('Покажите EDA/Ml-программу'):    
             with open(file_location, 'r', encoding='utf-8') as f:
                  lines_to_display = f.read()
