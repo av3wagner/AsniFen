@@ -94,8 +94,8 @@ np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
 
 st.map(dfmap)
 
-image = Image.open('food.png')
-st.image(image, caption='Sunrise by the mountains')
+#image = Image.open('food.png')
+#st.image(image, caption='Sunrise by the mountains')
 
 if st.button('Say hello'):
     st.write('Why hello there')
