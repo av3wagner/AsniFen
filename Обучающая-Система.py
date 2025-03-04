@@ -259,7 +259,7 @@ with st.expander("2. Собрание избранных статей из об�
     col1, col2, col3 = st.columns( [1, 40, 1])
     with col2:  
         st.markdown("")
-        MdFileToStreamlit("assets/ArtikelList.md")
+        #MdFileToStreamlit("assets/ArtikelList.md")
 
 with st.expander("3. Информиация об авторе АСНИ-МЕД"):
     welcome()
