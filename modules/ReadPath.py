@@ -5,8 +5,7 @@ from os import listdir
 from os.path import isfile, join
 import pathlib
 import base64
-
-from docx import Document
+#from docx import Document
 
 def show_pdf(file_path):
     st.title('✨ Визуализация PDF документа 📜')
