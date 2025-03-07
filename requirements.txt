@@ -6,9 +6,3 @@ matplotlib
 pandas 
 numpy 
 setuptools 
-os
-sys
-listdir
-pathlib
-base64
-seaborn
