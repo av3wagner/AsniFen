@@ -5,5 +5,5 @@ port = 8501
 [theme]
 base="dark"
 primaryColor = '#E694FF'
-backgroundColor = "#FFFFFF"
+backgroundColor = "#000000"
 textColor = '#E8E8E8'
