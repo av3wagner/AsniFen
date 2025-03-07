@@ -215,7 +215,7 @@ def welcome():
         unsafe_allow_html=True)
                 
         st.markdown("")
-        #MdFileToStreamlit("assets/AWresume.md")
+        MdFileToStreamlit("/mount/src/asnifen/assets/AWresume.md")
         
     with col3:              
         st.markdown(""" <style> .font {
