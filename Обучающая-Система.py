@@ -215,7 +215,7 @@ def welcome():
         unsafe_allow_html=True)
                 
         st.markdown("")
-        MdFileToStreamlit("/mount/src/asnifen/assets/AWresume.md")
+        MdFileToStreamlit("/mount/src/asnifen/AWresume.md")
         
     with col3:              
         st.markdown(""" <style> .font {
@@ -259,7 +259,7 @@ with st.expander("2. Собрание избранных статей из об�
     col1, col2, col3 = st.columns( [1, 40, 1])
     with col2:  
         st.markdown("")
-        #MdFileToStreamlit("/mount/src/asnifen/assets/ArtikelList.md")
+        #MdFileToStreamlit("/mount/src/asnifen/ArtikelList.md")
 
 with st.expander("3. Информиация об авторе АСНИ-МЕД"):
     welcome()
