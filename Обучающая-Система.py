@@ -23,9 +23,9 @@ st.set_page_config(
     }
 )
 
-st.sidebar.title('Navigation')
-path = os.getcwd()
-st.write(path)
+#st.sidebar.title('Navigation')
+#path = os.getcwd()
+#st.write(path)
 
 Part1 = '''## Краткое описание системы
 
@@ -252,7 +252,13 @@ with col2:
     st.markdown(f'<h1 style="color:yellow;font-size:36px;text-align:center">{"Asfendijarov Kazakh National Medical University"}</h1>', unsafe_allow_html=True)
     st.markdown(f'<h1 style="color:yellow;font-size:28px;text-align:center">{"Автоматизировання Обучающая Система Научных Исследований в медицине и здравоохранении «АСНИ-Обучение»"}</h1>', unsafe_allow_html=True)
     st.markdown(f'<h2 style="color:white;font-size:24px;text-align:center">{"Система для любознательных и настойчивых"}</h2>', unsafe_allow_html=True)
+    
     st.markdown("")
+    st.sidebar.title('Navigation')
+    path = os.getcwd()
+    st.write(path)
+    st.markdown("")
+    
     st.write(f"""
             <div class="container">
                 <div class="box">
