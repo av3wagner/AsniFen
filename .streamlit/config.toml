@@ -3,6 +3,7 @@ headless = true
 port = 8501
 
 [theme]
-primaryColor = "#FF5733"
+base="dark"
+primaryColor = '#E694FF'
 backgroundColor = "#FFFFFF"
-font = "serif"
+textColor = '#E8E8E8'
