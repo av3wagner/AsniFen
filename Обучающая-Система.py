@@ -26,6 +26,7 @@ st.set_page_config(
 #st.sidebar.title('Navigation')
 #path = os.getcwd()
 #st.write(path)
+#/mount/src/asnifen
 
 Part1 = '''## Краткое описание системы
 
@@ -254,10 +255,10 @@ with col2:
     st.markdown(f'<h2 style="color:white;font-size:24px;text-align:center">{"Система для любознательных и настойчивых"}</h2>', unsafe_allow_html=True)
     
     st.markdown("")
-    st.sidebar.title('Navigation')
-    path = os.getcwd()
-    st.write(path)
-    st.markdown("")
+    #st.sidebar.title('Navigation')
+    #path = os.getcwd()
+    #st.write(path)
+    #st.markdown("")
     
     st.write(f"""
             <div class="container">
