@@ -256,7 +256,7 @@ with col2:
                     <div class="spin-container">
                         <div class="shape">
                             <div class="bd">
-                                <img src="{img2}" alt="AW" width="600" height="400" style="display: block; margin: auto">
+                                <img src="{img}" alt="AW" width="600" height="400" style="display: block; margin: auto">
                             </div>
                         </div>
                     </div>
