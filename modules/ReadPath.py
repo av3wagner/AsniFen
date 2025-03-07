@@ -17,10 +17,10 @@ def show_pdf(file_path):
 
 def execute_python_file(file_path):
     try:
-        #with open(file_path, 'r', encoding='utf-8') as file:
-        #    python_code = file.read()
+        with open(file_path, 'r', encoding='utf-8') as file:
+            python_code = file.read()
         #exec(python_code)
-        EDA-Reports=os.path.join(cwd, "modules\programs\EDA-Reports.py")
+        EDA-Reports=os.path.join(cwd, "modules/programs/EDA-Reports.py")
         print(EDA-Reports)
         exec(open(EDA-Reports).read(), globals())
 
