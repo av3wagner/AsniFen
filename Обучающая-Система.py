@@ -23,6 +23,9 @@ st.set_page_config(
     }
 )
 
+st.sidebar.title('Navigation')
+path = os.getcwd()
+st.write(path)
 
 Part1 = '''## Краткое описание системы
 
