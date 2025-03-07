@@ -1,7 +1,14 @@
 # Core
-streamlit 
+streamlit>=1.42.1
+toml>=0.10.2
+markdown>=3.1.1  
+matplotlib>=3.1.2 
 os
 sys
 listdir
 pathlib
 base64
+seaborn
+pandas
+setuptools
+numpy
