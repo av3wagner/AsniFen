@@ -31,8 +31,8 @@ st.set_page_config(
 
 #m.select_file()  
 #"/mount/src/asnifen/modules/ReadPath.py"
-#cwd = os.getcwd()
-#Reports=os.path.join(cwd, "modules/programs/Reports.py")
+cwd = os.getcwd()
+Reports=os.path.join(cwd, "modules/programs/Reports.py")
 #print(EDA-Reports)
 #exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
-exec(open("/modules/programs/Reports.py").read(), globals())
+exec(open(Reports).read(), globals())
