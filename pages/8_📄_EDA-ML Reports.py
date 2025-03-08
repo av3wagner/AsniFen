@@ -36,10 +36,11 @@ st.set_page_config(
     }
 )
 
-cwd = os.getcwd()
-Report=os.path.join(cwd, "modules\programs\Reports.py")
+#cwd = os.getcwd()
+#Report=os.path.join(cwd, "modules\programs\Reports.py")
 #exec(open(Report, "r", encoding="utf-8").read(), globals())
 
+Report="/mount/src/asnifen/modules/programs/EDA-Reports.py"
 with open(Report, 'r', encoding='utf-8') as file:
     python_code = file.read()
     
