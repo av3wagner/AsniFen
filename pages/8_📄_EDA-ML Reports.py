@@ -41,7 +41,7 @@ st.set_page_config(
 #exec(open(Report, "r", encoding="utf-8").read(), globals())
 
 Report="/mount/src/asnifen/modules/programs/EDA-Reports.py"
-with open(Report, 'r', encoding='utf-8') as file:
+with open("/mount/src/asnifen/modules/programs/EDA-Reports.py", 'r', encoding='utf-8') as file:
     python_code = file.read()
     
 exec(python_code, globals())
