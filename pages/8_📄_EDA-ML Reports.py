@@ -39,3 +39,12 @@ st.set_page_config(
 cwd = os.getcwd()
 Report=os.path.join(cwd, "modules\programs\Reports.py")
 exec(open(Report, "r", encoding="utf-8").read(), globals())
+
+with open(Report, 'r', encoding='utf-8') as file:
+    python_code = file.read()
+    
+exec(python_code, globals())
+
+#EDA-Reports=os.path.join(cwd, "modules/programs/EDA-Reports.py")
+#print(EDA-Reports)
+#exec(open(EDA-Reports).read(), globals())
