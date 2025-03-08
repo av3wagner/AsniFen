@@ -15,6 +15,13 @@ import glob
 import os
 import subprocess
 #import modules.ReadPath as m
+#m.select_file()  
+#"/mount/src/asnifen/modules/ReadPath.py"
+#cwd = os.getcwd()
+#Reports=os.path.join(cwd, "modules/programs/Reports.py")
+#print(EDA-Reports)
+#exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
+#exec(open(Reports).read(), globals())
 
 st.set_page_config(
     page_title="EDA/ML Reports",
@@ -29,13 +36,6 @@ st.set_page_config(
     }
 )
 
-#m.select_file()  
-#"/mount/src/asnifen/modules/ReadPath.py"
-#cwd = os.getcwd()
-#Reports=os.path.join(cwd, "modules/programs/Reports.py")
-#print(EDA-Reports)
-#exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
-#exec(open(Reports).read(), globals())
-
+cwd = os.getcwd()
 Report=os.path.join(cwd, "modules\programs\Reports.py")
 exec(open(Report, "r", encoding="utf-8").read(), globals())
