@@ -10,13 +10,13 @@ gunicorn
 dash
 #
 dash_bootstrap_components
-#streamlit.components.v1
-PIL 
+streamlit.components.v1
+#PIL 
 base64
 sys
 inspect
 os
 pathlib
 glob
-#matplotlib.pyplot 
+matplotlib.pyplot 
 seaborn 
