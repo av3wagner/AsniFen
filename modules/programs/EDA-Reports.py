@@ -14,8 +14,6 @@ from os.path import isfile, join
 import glob
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-#with open("/mount/src/asnifen/ASFEN_LOGO3.jpg", "rb") as img_file:
 with open("/mount/src/asnifen/assets/EDA01.jpg ", "rb") as img_file:    
         img01 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
         
