@@ -47,5 +47,6 @@ Report="/mount/src/asnifen/modules/programs/EDA-Reports.py"
 with open("/mount/src/asnifen/modules/programs/EDA-Reports.py", 'r', encoding='utf-8') as file:
     python_code = file.read()
 
-st.code(python_code, "python") 
-exec(python_code, globals())
+#st.code(python_code, "python") 
+exec(python_code)
+#exec(python_code, globals())
