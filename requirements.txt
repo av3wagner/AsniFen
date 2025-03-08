@@ -8,3 +8,14 @@ numpy
 setuptools 
 gunicorn
 dash
+#
+streamlit.components.v1
+PIL 
+base64
+sys
+inspect
+os
+pathlib
+glob
+matplotlib.pyplot 
+seaborn 
