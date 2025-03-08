@@ -22,6 +22,9 @@ import subprocess
 #print(EDA-Reports)
 #exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
 #exec(open(Reports).read(), globals())
+#EDA-Reports=os.path.join(cwd, "modules/programs/EDA-Reports.py")
+#print(EDA-Reports)
+#exec(open(EDA-Reports).read(), globals())
 
 st.set_page_config(
     page_title="EDA/ML Reports",
@@ -43,11 +46,6 @@ st.set_page_config(
 Report="/mount/src/asnifen/modules/programs/EDA-Reports.py"
 with open("/mount/src/asnifen/modules/programs/EDA-Reports.py", 'r', encoding='utf-8') as file:
     python_code = file.read()
-    #lines_to_display = file.read()
 
 st.code(python_code, "python") 
 exec(python_code, globals())
-
-#EDA-Reports=os.path.join(cwd, "modules/programs/EDA-Reports.py")
-#print(EDA-Reports)
-#exec(open(EDA-Reports).read(), globals())
