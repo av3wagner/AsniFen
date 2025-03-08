@@ -7,3 +7,4 @@ pandas
 numpy 
 setuptools 
 gunicorn
+dash
