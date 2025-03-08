@@ -43,7 +43,9 @@ st.set_page_config(
 Report="/mount/src/asnifen/modules/programs/EDA-Reports.py"
 with open("/mount/src/asnifen/modules/programs/EDA-Reports.py", 'r', encoding='utf-8') as file:
     python_code = file.read()
-    
+    lines_to_display = f.read()
+
+st.code(lines_to_display, "python") 
 exec(python_code, globals())
 
 #EDA-Reports=os.path.join(cwd, "modules/programs/EDA-Reports.py")
