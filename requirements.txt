@@ -9,6 +9,7 @@ setuptools
 gunicorn
 dash
 #
+dash_bootstrap_components
 streamlit.components.v1
 PIL 
 base64
