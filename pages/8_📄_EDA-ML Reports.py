@@ -33,5 +33,5 @@ with open("/mount/src/asnifen/modules/programs/EDA-Reports.py", 'r', encoding='u
     python_code = file.read()
 
 #st.code(python_code, "python") 
-#exec(python_code)
-exec(python_code, globals())
+exec(python_code)
+#exec(python_code, globals())
