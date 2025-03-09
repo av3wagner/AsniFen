@@ -18,7 +18,7 @@ import seaborn as sns
 
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
-import .modules.ReadPath as m
+import /mount/src/asnifen/modules.ReadPath as m
 
 st.set_page_config(
     page_title="EDA/ML Reports",
