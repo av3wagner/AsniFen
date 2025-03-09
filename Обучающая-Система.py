@@ -26,7 +26,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-st.write(sys.path.append("/mount/src/asnifen/"))
+st.write(os.chdir("/mount/src/asnifen/"))
 Part1 = '''## Краткое описание системы
 
 ### Содержание
