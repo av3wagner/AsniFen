@@ -26,8 +26,8 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-path="/mount/src/asnifen/"
-st.write(path)
+#path="/mount/src/asnifen/"
+#st.write(path)
 Part1 = '''## Краткое описание системы
 
 ### Содержание
