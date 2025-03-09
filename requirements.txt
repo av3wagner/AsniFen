@@ -2,3 +2,4 @@
 streamlit
 toml
 seaborn
+matplotlib.pyplot
