@@ -17,6 +17,8 @@ from os.path import isfile, join
 import glob
 import os
 import subprocess
+os.chdir("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/modules"
 import modules.ReadPath as m
 
 st.set_page_config(
