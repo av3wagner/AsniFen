@@ -158,3 +158,166 @@ __*Материалы этого проекта могут служить хор
 
 __Берлин, 16\.02\.2025__
 '''
+######################################
+with open("/mount/src/asnifen/WagnerFoto.jpg", "rb") as img_file:    
+    img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
+	
+with open("/mount/src/asnifen/ASFEN_LOGO3.jpg", "rb") as img_file:
+    img2 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()        
+
+def MdFileToStreamlit(MdFile):
+    with open(MdFile, 'r', encoding='utf-8') as f:
+        readme_line = f.readlines()
+        readme_buffer = []
+        resource_files = [os.path.basename(x) for x in glob.glob(f'Resources/*')]
+
+    for line in readme_line :
+        readme_buffer.append(line) 
+        for image in resource_files:
+            if image in line:
+                st.markdown(''.join(readme_buffer[:-1])) 
+                st.image(f'Resources/{image}')
+                readme_buffer.clear()
+
+    st.markdown(''.join(readme_buffer))    
+
+def ASNISystem(): 
+    col1, col2, col3 = st.columns( [1, 20, 1])
+    with col2:  
+        st.markdown(Part1)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abc"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part2)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abd"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part3)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abe"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part4)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abf"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part5)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abg"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part6)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abh"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part7)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abi"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part8)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abj"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part9)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abk"}</h6>', unsafe_allow_html=True)
+
+        st.markdown(Part10)
+        st.markdown(f'<h6 style="color:#111111;font-size:4px;">{"abl"}</h6>', unsafe_allow_html=True)
+        st.markdown(Part11)
+
+#Информиация об авторе    
+def welcome():
+    col1, col2, col3 = st.columns( [1, 40, 1])
+      
+    with col1:              
+        st.markdown("")
+    with col2:  
+        st.write(f"""
+        <div class="container">
+            <div class="box">
+                <div class="spin-container">
+                    <div class="shape">
+                        <div class="bd">
+                            <img src="{img}" alt="AW" width="150" height="200" style="display: block; margin: auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        """, 
+        unsafe_allow_html=True)
+                
+        st.markdown("")
+        MdFileToStreamlit("/mount/src/asnifen/AWresume.md")
+        
+    with col3:              
+        st.markdown(""" <style> .font {
+        font-size:10px ; font-family: 'Cooper Black'; color: #FF9633;} 
+        </style> """, unsafe_allow_html=True)
+        st.markdown('<p class="font"> </p>', unsafe_allow_html=True)
+        
+
+col1, col2, col3 = st.columns( [1, 40, 1])
+
+with col2:  
+    st.markdown(f'<h1 style="color:yellow;font-size:36px;text-align:center">{"Asfendijarov Kazakh National Medical University"}</h1>', unsafe_allow_html=True)
+    st.markdown(f'<h1 style="color:yellow;font-size:28px;text-align:center">{"Автоматизировання Обучающая Система Научных Исследований в медицине и здравоохранении «АСНИ-Обучение»"}</h1>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="color:white;font-size:24px;text-align:center">{"Система для любознательных и настойчивых"}</h2>', unsafe_allow_html=True)
+    
+    st.markdown("")
+    #st.sidebar.title('Navigation')
+    #path = os.getcwd()
+    #st.write(path)
+    #st.markdown("")
+    
+    st.write(f"""
+            <div class="container">
+                <div class="box">
+                    <div class="spin-container">
+                        <div class="shape">
+                            <div class="bd">
+                                <img src="{img2}" alt="AW" width="600" height="400" style="display: block; margin: auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            """, 
+    unsafe_allow_html=True)
+    st.title("Добро пожаловать в АСНИ-Обучение!")
+    st.markdown("""
+        АСНИ-Обучение - это система с открытым исходным кодом, помогающее пользователям применять избранные методы машинного обучения
+        такие как поиск данных, предварительная обработка и построение моделей, создание научных отчетов и отчетов о проведении анализа 
+        клинических исследований (Clinical trials), другие процедуры. 
+        Самая важное в этой системе заключается в том, что вы можете делать всё это БЕЗ программирования! 
+        """)
+          
+
+
+with st.expander("1. Информация об АСНИ-Обучение", expanded=True):
+    ASNISystem()
+
+
+with st.expander("2. Собрание избранных статей из области биостатистики и Data Science"):
+    st.title('Собрание избранных статей из области биостатистики и Data Science')
+    st.markdown("### :blue[Внимание: Статьи окончательно не упорядочены по рубрикам!]")
+    st.write('''
+    Эти статьи дают общие сведения о вышеназванных областях и могут быть хорошим справочным материалом для различных категорий пользователей.
+
+    Приведенный в статьях программый код может быть адаптирован и использован в учебных целях и для реализации научных пароектов.  
+    
+    Если в статье есть ссылка на GitHub Repositorium, то было бы полезно клонировать этот Repositorium на персональный компьютер и исползовать
+    его в своих учебных и научных целях.
+    ''')
+    
+    col1, col2, col3 = st.columns( [1, 40, 1])
+    with col2:  
+        st.markdown("")
+        MdFileToStreamlit("/mount/src/asnifen/ArtikelList.md")
+
+with st.expander("3. Информиация об авторе АСНИ-МЕД"):
+    welcome()
+
+
+def expander_label(idx):
+	hvar = f"""<script>
+				var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
+				elements[{idx}].style.color = 'rgba(255, 255, 255, 1)';
+				elements[{idx}].style.fontFamily = 'sans-serif';
+				elements[{idx}].style.fontSize = 'large';
+			</script>"""
+
+	components.html(hvar, height=0, width=0)
+
+for idx in range(3):
+	expander_label(idx)
