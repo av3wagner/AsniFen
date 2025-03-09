@@ -13,7 +13,7 @@ from os.path import isfile, join
 import glob
 import os
 import subprocess
-#import modules.ReadPath as m
+import modules.ReadPath as m
 
 st.set_page_config(
     page_title="EDA/ML Reports",
