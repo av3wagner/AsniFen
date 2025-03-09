@@ -46,11 +46,11 @@ with open("./modules/programs/EDA-Reports.py", 'r', encoding='utf-8') as file:
     python_code = file.read()
 
 
-with open("./assets/EDA01.jpg ", "rb") as img_file:    
-        img01 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
+#with open("/mount/src/asnifen/assets/EDA01.jpg ", "rb") as img_file:    
+#        img01 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
         
-with open("/mount/src/asnifen/assets/EDA02.jpg ", "rb") as img_file:    
-        img02 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()   
+#with open("/mount/src/asnifen/assets/EDA02.jpg ", "rb") as img_file:    
+#        img02 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()   
         
 columns=['age', 'operation_year', 'lymph_nodes', 'survival_status']
 data=pd.read_csv("./data/haberman.csv",names=columns)
