@@ -14,6 +14,8 @@ import gunicorn
 
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
+path=sys.path.append("/mount/src/asnifen/")
+st.write(path)
 
 st.set_page_config(
     page_title="Asfendijarov Kazakh National Medical University «АСНИ-МЕД»",
@@ -26,8 +28,6 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-
-#st.write('test')
 
 Part1 = '''## Краткое описание системы
 
@@ -256,11 +256,7 @@ with col2:
     st.markdown(f'<h2 style="color:white;font-size:24px;text-align:center">{"Система для любознательных и настойчивых"}</h2>', unsafe_allow_html=True)
     
     st.markdown("")
-    #st.sidebar.title('Navigation')
-    #path = os.getcwd()
-    #st.write(path)
-    #st.markdown("")
-    
+      
     st.write(f"""
             <div class="container">
                 <div class="box">
@@ -282,12 +278,9 @@ with col2:
         клинических исследований (Clinical trials), другие процедуры. 
         Самая важное в этой системе заключается в том, что вы можете делать всё это БЕЗ программирования! 
         """)
-          
-
 
 with st.expander("1. Информация об АСНИ-Обучение", expanded=True):
     ASNISystem()
-
 
 with st.expander("2. Собрание избранных статей из области биостатистики и Data Science"):
     st.title('Собрание избранных статей из области биостатистики и Data Science')
