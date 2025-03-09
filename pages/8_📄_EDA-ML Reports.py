@@ -25,6 +25,8 @@ sys.path.append("/mount/src/asnifen/modules")
 import modules
 from modules import * #ReadPath.py
 sys.path.append("/mount/src/asnifen/assets")
+import assets 
+from assets import *
 
 st.set_page_config(
     page_title="EDA/ML Reports",
