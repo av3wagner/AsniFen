@@ -24,6 +24,7 @@ sys.path.append("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/modules")
 import modules
 from modules import * #ReadPath.py
+sys.path.append("/mount/src/asnifen/assets")
 
 st.set_page_config(
     page_title="EDA/ML Reports",
@@ -38,7 +39,7 @@ st.set_page_config(
     }
 )
 
-Report="./modules/programs/EDA-Reports.py"
+#Report="./modules/programs/EDA-Reports.py"
 with open("./modules/programs/EDA-Reports.py", 'r', encoding='utf-8') as file:
     python_code = file.read()
 
