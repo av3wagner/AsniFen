@@ -23,7 +23,7 @@ os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/modules")
 import modules
-from . import ReadPath
+from modules import ReadPath
 
 st.set_page_config(
     page_title="EDA/ML Reports",
