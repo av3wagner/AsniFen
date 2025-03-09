@@ -19,7 +19,8 @@ import seaborn as sns
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/modules")
-import ReadPath as m
+#https://www.geeksforgeeks.org/how-to-import-local-modules-with-python/
+from . import ReadPath as m
 #EDA-Reports=os.path.join(cwd, "modules/programs/EDA-Reports.py")
 
 st.set_page_config(
