@@ -159,10 +159,10 @@ __*Материалы этого проекта могут служить хор
 __Берлин, 16\.02\.2025__
 '''
 ######################################
-with open("/mount/src/asnifen/WagnerFoto.jpg", "rb") as img_file:    
+with open("./WagnerFoto.jpg", "rb") as img_file:    
     img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 	
-with open("/mount/src/asnifen/ASFEN_LOGO3.jpg", "rb") as img_file:
+with open("./ASFEN_LOGO3.jpg", "rb") as img_file:
     img2 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()        
 
 def MdFileToStreamlit(MdFile):
@@ -238,7 +238,7 @@ def welcome():
         unsafe_allow_html=True)
                 
         st.markdown("")
-        MdFileToStreamlit("/mount/src/asnifen/AWresume.md")
+        MdFileToStreamlit("./AWresume.md")
         
     with col3:              
         st.markdown(""" <style> .font {
@@ -303,7 +303,7 @@ with st.expander("2. Собрание избранных статей из об�
     col1, col2, col3 = st.columns( [1, 40, 1])
     with col2:  
         st.markdown("")
-        MdFileToStreamlit("/mount/src/asnifen/ArtikelList.md")
+        MdFileToStreamlit("./ArtikelList.md")
 
 with st.expander("3. Информиация об авторе АСНИ-МЕД"):
     welcome()
