@@ -27,7 +27,8 @@ st.set_page_config(
     }
 )
 
-st.write('test')
+#st.write('test')
+
 Part1 = '''## Краткое описание системы
 
 ### Содержание
