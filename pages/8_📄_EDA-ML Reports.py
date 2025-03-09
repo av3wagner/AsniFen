@@ -13,6 +13,11 @@ from os.path import isfile, join
 import glob
 import os
 import subprocess
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+os.chdir("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/")
 import modules.ReadPath as m
 
 st.set_page_config(
@@ -28,38 +33,19 @@ st.set_page_config(
     }
 )
 
-Report="/mount/src/asnifen/modules/programs/EDA-Reports.py"
-with open("/mount/src/asnifen/modules/programs/EDA-Reports.py", 'r', encoding='utf-8') as file:
+Report="./modules/programs/EDA-Reports.py"
+with open("./modules/programs/EDA-Reports.py", 'r', encoding='utf-8') as file:
     python_code = file.read()
 
-#st.code(python_code, "python") 
-#exec(python_code)
-#exec(python_code, globals())
 
-#st.dataframe(data.head())
-
-import streamlit as st  
-import streamlit.components.v1 as components
-from  PIL import Image
-import numpy as np
-import pandas as pd
-import base64
-import sys
-import inspect, os
-import pathlib
-from os import listdir
-from os.path import isfile, join
-import glob
-import matplotlib.pyplot as plt
-import seaborn as sns
-with open("/mount/src/asnifen/assets/EDA01.jpg ", "rb") as img_file:    
+with open("./assets/EDA01.jpg ", "rb") as img_file:    
         img01 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
         
-with open("/mount/src/asnifen/assets/EDA02.jpg ", "rb") as img_file:    
+with open("./assets/EDA02.jpg ", "rb") as img_file:    
         img02 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()   
         
 columns=['age', 'operation_year', 'lymph_nodes', 'survival_status']
-data=pd.read_csv("/mount/src/asnifen/data/haberman.csv",names=columns)
+data=pd.read_csv("./data/haberman.csv",names=columns)
     
 def change_param(x):
     if(x==1):
