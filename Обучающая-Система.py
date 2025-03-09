@@ -12,6 +12,9 @@ from os.path import isfile, join
 import glob
 import gunicorn
 
+os.chdir("/mount/src/AsniFen/")
+sys.path.append("/mount/src/AsniFen/")
+
 st.set_page_config(
     page_title="Asfendijarov Kazakh National Medical University «АСНИ-МЕД»",
     page_icon="🧊",
