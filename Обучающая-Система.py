@@ -15,8 +15,6 @@ import gunicorn
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
 path=sys.path.append("/mount/src/asnifen/")
-st.write(path)
-
 st.set_page_config(
     page_title="Asfendijarov Kazakh National Medical University «АСНИ-МЕД»",
     page_icon="🧊",
@@ -28,7 +26,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-
+st.write(path)
 Part1 = '''## Краткое описание системы
 
 ### Содержание
