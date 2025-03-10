@@ -37,6 +37,9 @@ def execute_python_file(file_path):
             st.markdown(completed_process.stderr)
     except FileNotFoundError:
         st.markdown(f"Error: The file '{file_path}' does not exist.")
-        
-file_path ='modules/programs/Reports.py' 
+os.chdir("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/modules"
+sys.path.append("/mount/src/asnifen/modules/program"  
+                
+file_path ='/mount/src/asnifen/modules/programs/Reports.py' 
 execute_python_file1(file_path)
