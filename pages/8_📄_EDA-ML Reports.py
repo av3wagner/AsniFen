@@ -36,4 +36,5 @@ st.set_page_config(
     }
 )
 
+st.write(sys.path)
 m.select_file() 
