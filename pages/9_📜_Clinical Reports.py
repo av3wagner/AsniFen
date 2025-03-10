@@ -11,9 +11,20 @@ import pathlib
 from os import listdir
 from os.path import isfile, join
 import glob
-import os
+import os, sys
 import subprocess
-st.set_page_config(page_title="Clinica Reports")
+
+
+
+#from docx import Document
+
+def show_pdf(file_path):
+    st.title('✨ Визуализация PDF документа 📜')
+    st.markdown("")
+    with open(file_path,"rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="1000" height="700" type="application/pdf"></iframe>'
+    st.markdown(pdf_display, unsafe_allow_html=True)
 
 def execute_python_file1(file_path):
     try:
@@ -43,6 +54,8 @@ sys.path.append("/mount/src/asnifen/modules")
 sys.path.append("/mount/src/asnifen/modules/programs")  
 #st.write(sys.path)
 
-file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
+#file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
+file_path = '/mount/src/asnifen/Reports.py' 
 st.write(file_path)
-execute_python_file1(file_path)
+show_pdf(file_path)
+#execute_python_file1(file_path)
