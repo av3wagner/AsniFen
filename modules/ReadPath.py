@@ -28,7 +28,7 @@ def execute_python_file(file_path):
         st.markdown(f"Error: The file '{file_path}' does not exist.")
 
 def select_file():
-    parent_path = 'modules/programs'
+    parent_path = '/mount/src/asnifen/assets'
     fileList = []
     extensions = ['py']
     fileList = listdir(parent_path)
@@ -49,7 +49,7 @@ def select_file():
             st.code(lines_to_display, "python")    
 
 def open_file_selection_doc():
-    parent_path = 'modules/docs'
+    parent_path = '/mount/src/asnifen/assets'
     fileList = []
     extensions = ['pdf', 'docx']
     fileList = listdir(parent_path)
@@ -75,7 +75,7 @@ def open_file_selection_doc():
     
             
 def open_file_selection_doc2():
-    parent_path = 'modules/docs'
+    parent_path = '/mount/src/asnifen/assets'
     fileList = []
     extensions = ['pdf', 'docx']
     fileList = listdir(parent_path)
@@ -124,8 +124,4 @@ def open_test():
             for para in all_paras:
                 print(para.text)
         else:
-            print("Can't read files with extension {} for file {}".format(extension, filename))
-
-
-
-  
+            print("Can't read files with extension {} for file {}".format(extension, filename)) 
