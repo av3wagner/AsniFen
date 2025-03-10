@@ -13,9 +13,6 @@ from os.path import isfile, join
 import glob
 import os, sys
 import subprocess
-
-
-
 #from docx import Document
 
 def show_pdf(file_path):
@@ -55,7 +52,7 @@ sys.path.append("/mount/src/asnifen/modules/programs")
 #st.write(sys.path)
 
 #file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
-file_path = '/mount/src/asnifen/Einleitung.pdf' 
+file_path = '/mount/src/asnifen/assets/Einleitung.pdf' 
 st.write(file_path)
 show_pdf(file_path)
 #execute_python_file1(file_path)
