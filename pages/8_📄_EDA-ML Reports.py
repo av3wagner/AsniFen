@@ -21,7 +21,7 @@ import subprocess
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/modules"
 sys.path.append("/mount/src/asnifen/modules/program"                
-#import modules.ReadPath as m
+import modules.ReadPath as m
 
 st.set_page_config(
     page_title="EDA/ML Reports",
