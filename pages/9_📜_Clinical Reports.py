@@ -46,7 +46,8 @@ def execute_python_file(file_path):
         st.markdown(f"Error: The file '{file_path}' does not exist.")
 
 def Rselect_file():
-    parent_path = '/mount/src/asnifen/modules/programs'
+    #parent_path = '/mount/src/asnifen/modules/programs'
+    parent_path = 'modules/programs'
     fileList = []
     extensions = ['py']
     fileList = listdir(parent_path)
