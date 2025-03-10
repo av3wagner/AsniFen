@@ -40,8 +40,9 @@ def execute_python_file(file_path):
 
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/modules")
-sys.path.append("/mount/src/asnifen/modules/program")  
+sys.path.append("/mount/src/asnifen/modules/programs")  
 st.write(sys.path)
 
 file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
+st.write(file_path)
 execute_python_file1(file_path)
