@@ -13,8 +13,27 @@ from os.path import isfile, join
 import glob
 import os, sys
 import subprocess
+
+os.chdir("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/modules"
+sys.path.append("/mount/src/asnifen/modules/program"     
+                
 import modules.ReadPath as m
-#from docx import Document
+
+st.set_page_config(
+    page_title="EDA/ML Reports",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
+st.write(sys.path)
 
 def show_pdf(file_path):
     st.title('✨ Визуализация PDF документа 📜')
@@ -47,15 +66,11 @@ def execute_python_file(file_path):
     except FileNotFoundError:
         st.markdown(f"Error: The file '{file_path}' does not exist.")
 
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/modules")
-sys.path.append("/mount/src/asnifen/modules/programs")  
-
 #st.write(sys.path)
 #file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
 #file_path = '/mount/src/asnifen/assets/Einleitung.pdf' 
-file_path = '/mount/src/asnifen/modules/programs/Einleitung.pdf' 
-st.write(file_path)
+#file_path = '/mount/src/asnifen/modules/programs/Einleitung.pdf' 
+#st.write(file_path)
 #show_pdf(file_path)
 #execute_python_file1(file_path)
 
