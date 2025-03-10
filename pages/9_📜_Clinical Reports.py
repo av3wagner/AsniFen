@@ -38,5 +38,5 @@ def execute_python_file(file_path):
     except FileNotFoundError:
         st.markdown(f"Error: The file '{file_path}' does not exist.")
         
-file_path ='C:\IPYNBgesamt2025\ASNI-FEN\ASNI-FEN-SYSTEM\subdir\EDAReports.py' 
+file_path ='modules/programs/Reports.py' 
 execute_python_file1(file_path)
