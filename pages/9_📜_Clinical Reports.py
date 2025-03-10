@@ -49,7 +49,7 @@ def Rselect_file():
     #parent_path = '/mount/src/asnifen/modules/programs'
     parent_path = 'modules/programs'
     fileList = []
-    extensions = ['py']
+    #extensions = ['py']
     fileList = listdir(parent_path)
     onlyfiles = [f for f in fileList if isfile(join(parent_path, f)) and  (f.endswith(".py"))]   
     option = st.selectbox('Выберите программу для EDA/ML-Анализа', onlyfiles)
