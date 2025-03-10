@@ -27,21 +27,18 @@ def execute_python_file(file_path):
     except FileNotFoundError:
         st.markdown(f"Error: The file '{file_path}' does not exist.")
 
+
 def select_file():
-    parent_path = '/mount/src/asnifen/assets'
+    parent_path = 'modules/programs'
     fileList = []
     extensions = ['py']
     fileList = listdir(parent_path)
     onlyfiles = [f for f in fileList if isfile(join(parent_path, f)) and  (f.endswith(".py"))]   
     option = st.selectbox('Выберите программу для EDA/ML-Анализа', onlyfiles)
     file_location=os.path.join(parent_path, option) 
-    st.write(file_location)
     if file_location.find('.py') > 0:
         if st.button('Запустите EDA/ML-программу'):
             execute_python_file(file_location)
-            #with open(file_location, 'r', encoding='utf-8') as file:
-            #    python_code = file.read()
-            #exec(python_code)
             
         if st.button('Покажите EDA/Ml-программу'):    
             with open(file_location, 'r', encoding='utf-8') as f:
