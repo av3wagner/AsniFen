@@ -37,4 +37,5 @@ st.set_page_config(
 )
 
 st.write(sys.path)
+m.show_pdf("C:/AsniFen2025/assets/Einleitung.pdf")                
 #m.select_file() 
