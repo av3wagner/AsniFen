@@ -13,6 +13,7 @@ from os.path import isfile, join
 import glob
 import os, sys
 import subprocess
+import modules.ReadPath as m
 #from docx import Document
 
 def show_pdf(file_path):
@@ -49,10 +50,13 @@ def execute_python_file(file_path):
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/modules")
 sys.path.append("/mount/src/asnifen/modules/programs")  
+
 #st.write(sys.path)
 #file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
 #file_path = '/mount/src/asnifen/assets/Einleitung.pdf' 
 file_path = '/mount/src/asnifen/modules/programs/Einleitung.pdf' 
 st.write(file_path)
-show_pdf(file_path)
+#show_pdf(file_path)
 #execute_python_file1(file_path)
+
+m.select_file() 
