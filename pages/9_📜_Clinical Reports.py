@@ -14,27 +14,6 @@ import glob
 import os, sys
 import subprocess
 
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/modules"
-sys.path.append("/mount/src/asnifen/modules/program"     
-                
-import modules.ReadPath as m
-
-st.set_page_config(
-    page_title="EDA/ML Reports",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
-
-st.write(sys.path)
-
 def show_pdf(file_path):
     st.title('✨ Визуализация PDF документа 📜')
     st.markdown("")
@@ -66,6 +45,23 @@ def execute_python_file(file_path):
     except FileNotFoundError:
         st.markdown(f"Error: The file '{file_path}' does not exist.")
 
+def Rselect_file():
+    parent_path = '/mount/src/asnifen/modules/program'
+    fileList = []
+    extensions = ['py']
+    fileList = listdir(parent_path)
+    onlyfiles = [f for f in fileList if isfile(join(parent_path, f)) and  (f.endswith(".py"))]   
+    option = st.selectbox('Выберите программу для EDA/ML-Анализа', onlyfiles)
+    file_location=os.path.join(parent_path, option) 
+    if file_location.find('.py') > 0:
+        if st.button('Запустите EDA/ML-программу'):
+            execute_python_file(file_location)
+            
+        if st.button('Покажите EDA/Ml-программу'):    
+            with open(file_location, 'r', encoding='utf-8') as f:
+                 lines_to_display = f.read()
+            st.code(lines_to_display, "python")    
+
 #st.write(sys.path)
 #file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
 #file_path = '/mount/src/asnifen/assets/Einleitung.pdf' 
@@ -74,4 +70,25 @@ def execute_python_file(file_path):
 #show_pdf(file_path)
 #execute_python_file1(file_path)
 
-m.select_file() 
+os.chdir("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/modules"
+sys.path.append("/mount/src/asnifen/modules/program"     
+                
+#import modules.ReadPath as m
+
+st.set_page_config(
+    page_title="EDA/ML Reports",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
+st.write(sys.path)
+
+Rselect_file()
