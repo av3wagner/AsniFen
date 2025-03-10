@@ -71,8 +71,8 @@ def Rselect_file():
 #execute_python_file1(file_path)
 
 os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/modules"
-sys.path.append("/mount/src/asnifen/modules/program"     
+sys.path.append("/mount/src/asnifen/modules")
+sys.path.append("/mount/src/asnifen/modules/program")     
                 
 #import modules.ReadPath as m
 
