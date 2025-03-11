@@ -8,4 +8,5 @@ pandas
 gunicorn
 scikit-learn
 xgboost
+lightgbm
 #matplotlib.pyplot
