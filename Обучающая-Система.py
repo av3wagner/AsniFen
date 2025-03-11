@@ -14,7 +14,9 @@ import gunicorn
 
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/assets")
 sys.path.append("/mount/src/asnifen/modules")
+sys.path.append("/mount/src/asnifen/modules/programs")
 
 def RunEda():
     import time
