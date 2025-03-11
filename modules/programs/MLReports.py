@@ -73,7 +73,7 @@ import json
 from time import time, strftime, localtime
 from datetime import timedelta
 import shutil
-from docx import Document
+#from docx import Document
 today = datetime.date.today()
 year = today.year
 cwd = "modules" #os.getcwd()
