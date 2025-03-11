@@ -1,6 +1,5 @@
 #st.dataframe(data.head())
-
-#import streamlit as st  
+import streamlit as st  
 import streamlit.components.v1 as components
 from  PIL import Image
 import numpy as np
