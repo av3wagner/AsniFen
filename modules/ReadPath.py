@@ -40,9 +40,11 @@ def select_file():
         st.write(file_location)
         if st.button('Запустите EDA/ML-программу'):
             #execute_python_file(file_location)
-            fm="/mount/src/asnifen/modules/programs/MLReports.py"
-            st.write(fm)
+            #fm="/mount/src/asnifen/modules/programs/MLReports.py"
+            #st.write(fm)
+            import time
             exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
+            time.sleep(2.0)
             
         if st.button('Покажите EDA/Ml-программу'):    
             with open(file_location, 'r', encoding='utf-8') as f:
