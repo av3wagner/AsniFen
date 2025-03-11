@@ -19,7 +19,7 @@ sys.path.append("/mount/src/asnifen/modules")
 sys.path.append("/mount/src/asnifen/modules/programs")
 
 import time
-exec(open(r"/mount/src/asnifen/modules/ImportBib.py").read(), globals())
+exec(open("/mount/src/asnifen/modules/ImportBib.py").read(), globals())
 time.sleep(2.0)
 
 def RunEda():
