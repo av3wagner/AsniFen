@@ -90,5 +90,5 @@ st.set_page_config(
     }
 )
 
-st.write(sys.path)
+#st.write(sys.path)
 Rselect_file()
