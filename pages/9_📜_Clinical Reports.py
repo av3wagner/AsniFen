@@ -14,6 +14,12 @@ import glob
 import os, sys
 import subprocess
 
+os.chdir("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/assets")
+sys.path.append("/mount/src/asnifen/modules")
+sys.path.append("/mount/src/asnifen/modules/programs") 
+
 def show_pdf(file_path):
     st.title('✨ Визуализация PDF документа 📜')
     st.markdown("")
@@ -69,12 +75,7 @@ def Rselect_file():
 #show_pdf(file_path)
 #execute_python_file1(file_path)
 #parent_path = '/mount/src/asnifen/modules/programs'
-#extensions = ['py']
-
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/modules")
-sys.path.append("/mount/src/asnifen/modules/program")     
-                
+#extensions = ['py']              
 #import modules.ReadPath as m
 
 st.set_page_config(
