@@ -663,8 +663,8 @@ with st.expander("Пример проведения исследовательс
     st.header("Survival Status vs Operation Year")    
     fig=plt.figure(figsize=(9,5))    
     #8 violin plot for op year
-    sns.violinplot( x='survival_status', y="operation_year",data=data,hue="survival_status", height=3, aspect=2)
-    #plt.title("Survival Status vs Operation Year")
+    sns.violinplot( x='survival_status', y="operation_year",data=data,hue="survival_status")
+    plt.title("Survival Status vs Operation Year")
     plt.xlabel("Survival Status")
     plt.ylabel("Age")
     plt.legend('')
