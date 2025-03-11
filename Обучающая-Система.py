@@ -14,7 +14,29 @@ import gunicorn
 
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/modules")
 
+def RunEda():
+    import time
+    exec(open(r"/mount/src/asnifen/modules/ImportBib.py").read(), globals())
+    time.sleep(2.0)
+    
+    exec(open(r"/mount/src/asnifen/modules/ConfigINI2025.py").read(), globals())
+    import time
+    time.sleep(2.0)
+              
+    exec(open(r"/mount/src/asnifen/modules/AsniDef.py").read(), globals())
+    import time
+    time.sleep(2.0)
+    
+    exec(open(r"/mount/src/asnifen/modules/AsNiDefFa2.py").read(), globals())
+    import time
+    time.sleep(2.0)
+    
+    exec(open(r"/mount/src/asnifen/modules/Reports.py").read(), globals())
+    import time
+    time.sleep(2.0)  
+   
 st.set_page_config(
     page_title="Asfendijarov Kazakh National Medical University «АСНИ-МЕД»",
     page_icon="🧊",
