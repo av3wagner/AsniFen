@@ -42,7 +42,7 @@ def select_file():
             #execute_python_file(file_location)
             fm="/mount/src/asnifen/modules/programs/MLReports.py"
             st.write(fm)
-            exec(open(fm).read(), globals())
+            exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
             
         if st.button('Покажите EDA/Ml-программу'):    
             with open(file_location, 'r', encoding='utf-8') as f:
