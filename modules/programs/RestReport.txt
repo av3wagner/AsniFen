@@ -39,3 +39,19 @@ import seaborn as sns
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot(plt)
+
+st.markdown("")
+    st.header("Survival Status vs Lymph Nodes")
+    fig=plt.figure(figsize=(9,5))
+    #f=sns.violinplot( x='survival_status', y="lymph_nodes", data=data, hue="survival_status", scale='width', height=5, aspect=2)
+    f = sns.violinplot(data=data, x="survival_status", y="lymph_nodes", native_scale=True, inner='quartile', dodge=False, height=5, aspect=2)
+    plt.title("Survival Status vs Lymph Nodes")
+    plt.xlabel("Survival Status")
+    plt.ylabel("lymph nodes")
+    plt.legend('')
+    plt.rc('font', size=14)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot(plt)   
+
+    
