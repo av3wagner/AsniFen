@@ -40,7 +40,8 @@ def select_file():
         st.write(file_location)
         if st.button('Запустите EDA/ML-программу'):
             #execute_python_file(file_location)
-            exec(open(file_location).read(), globals())
+            fm=os.path.join(cwd, file_location)
+            exec(open(fm).read(), globals())
             
         if st.button('Покажите EDA/Ml-программу'):    
             with open(file_location, 'r', encoding='utf-8') as f:
