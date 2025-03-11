@@ -644,7 +644,6 @@ with st.expander("Пример проведения исследовательс
     plt.title("Survival Status vs Lymph Nodes")    
     plt.ylabel("Lymph Nodes")
     plt.xlabel("Survival Status")
-    #plt.legend(loc="center")
     plt.legend('')
     plt.rc('font', size=14)
     col1, col2, col3,= st.columns([1, 7, 1])
@@ -652,7 +651,6 @@ with st.expander("Пример проведения исследовательс
         st.pyplot(plt)
                 
     #7 violin plot for age
-        
     
     st.markdown("")
     st.header("Vbar Chart")
