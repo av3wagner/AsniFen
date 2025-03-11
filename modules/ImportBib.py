@@ -21,14 +21,7 @@ from os.path import isfile, join
 import pathlib
 import base64
 
-
-
-from IPython.core.display import HTML
-from PIL import Image
-from collections import Counter
-from colorama import Fore, Style 
-from configparser import ConfigParser
-from datetime import timedelta
+#Reports
 import streamlit as st  
 import streamlit.components.v1 as components
 from  PIL import Image
@@ -41,13 +34,7 @@ import pathlib
 from os import listdir
 from os.path import isfile, join
 import glob
-import gunicorn
-import subprocess
-import sys
-import time
-import warnings
-import win32com.client
-import win32com.client, time, pythoncom
-import xgboost as xgb
+import matplotlib.pyplot as plt
+import seaborn as sns
 sns.set()
 warnings.filterwarnings("ignore")
