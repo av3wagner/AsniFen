@@ -77,7 +77,7 @@ import shutil
 today = datetime.date.today()
 year = today.year
 cwd = "modules" #os.getcwd()
-print(cwd)
+st.write(cwd)
 
 ImportBib=os.path.join(cwd, "ImportBib.py")
 import time
