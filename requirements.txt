@@ -6,4 +6,5 @@ matplotlib
 numpy
 pandas
 gunicorn
+scikit-learn
 #matplotlib.pyplot
