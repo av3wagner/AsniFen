@@ -58,7 +58,7 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier,
 from sklearn.ensemble import BaggingClassifier, AdaBoostClassifier, VotingClassifier
 
 from sklearn.metrics import roc_auc_score
-from scikitplot.metrics import plot_roc_curve
+#from scikitplot.metrics import plot_roc_curve
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 from sklearn.metrics import RocCurveDisplay, roc_curve
 from sklearn.metrics import PrecisionRecallDisplay, precision_recall_curve
