@@ -76,8 +76,15 @@ import shutil
 #from docx import Document
 today = datetime.date.today()
 year = today.year
-cwd = "modules" #os.getcwd()
-st.write(cwd)
+
+os.chdir("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/assets")
+sys.path.append("/mount/src/asnifen/modules")
+sys.path.append("/mount/src/asnifen/modules/programs")
+
+#cwd = "modules" #os.getcwd()
+st.write(sys.path)
 
 ImportBib=os.path.join(cwd, "ImportBib.py")
 import time
@@ -89,12 +96,14 @@ time.sleep(2.0)
 #import time
 #time.sleep(2.0)
 
-AsniDef=os.path.join(cwd, "AsniDef.py")
+#AsniDef=os.path.join(cwd, "AsniDef.py")
+AsNiDef="/mount/src/asnifen/modules/AsNiDef.py"
 exec(open(AsniDef).read(), globals())
 import time
 time.sleep(2.0)
 
-AsNiDefFa2=os.path.join(cwd, "AsNiDefFa2.py")
+#AsNiDefFa2=os.path.join(cwd, "AsNiDefFa2.py")
+AsNiDefFa2="/mount/src/asnifen/modules/AsNiDefFa2.py"
 exec(open(AsNiDefFa2).read(), globals())
 import time
 time.sleep(2.0)
