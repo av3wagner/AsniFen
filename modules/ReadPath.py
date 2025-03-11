@@ -39,9 +39,8 @@ def select_file():
     if file_location.find('.py') > 0:
         st.write(file_location)
         if st.button('Запустите EDA/ML-программу'):
-            pa="/mount/src/asnifen/"
             #execute_python_file(file_location)
-            fm=os.path.join(pa, file_location)
+            fm="/mount/src/asnifen/modules/programs/MLReports.py"
             st.write(fm)
             exec(open(fm).read(), globals())
             
