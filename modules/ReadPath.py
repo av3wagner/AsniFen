@@ -39,8 +39,10 @@ def select_file():
     if file_location.find('.py') > 0:
         st.write(file_location)
         if st.button('Запустите EDA/ML-программу'):
+            cwd=os.chdir("/mount/src/asnifen/")
             #execute_python_file(file_location)
             fm=os.path.join(cwd, file_location)
+            st.write(fm)
             exec(open(fm).read(), globals())
             
         if st.button('Покажите EDA/Ml-программу'):    
