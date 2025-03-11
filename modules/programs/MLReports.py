@@ -17,7 +17,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn import metrics
 import matplotlib.pyplot as plt
-#import pandas_profiling as pp
 import math
 import random
 import seaborn as sns
