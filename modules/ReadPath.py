@@ -48,7 +48,7 @@ def select_file():
             #fm="/mount/src/asnifen/modules/programs/MLReports.py"
             #st.write(fm)
             import time
-            exec(open("/mount/src/asnifen/modules/programs/EDAReports.py").read(), globals())
+            exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
             time.sleep(2.0)
             
         if st.button('Покажите EDA/Ml-программу'):    
