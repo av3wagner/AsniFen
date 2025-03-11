@@ -37,6 +37,7 @@ def select_file():
     option = st.selectbox('Выберите программу для EDA/ML-Анализа', onlyfiles)
     file_location=os.path.join(parent_path, option) 
     if file_location.find('.py') > 0:
+        st.write(file_location)
         if st.button('Запустите EDA/ML-программу'):
             execute_python_file(file_location)
             
