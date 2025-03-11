@@ -36,7 +36,11 @@ def RunEda():
     exec(open(r"/mount/src/asnifen/modules/Reports.py").read(), globals())
     import time
     time.sleep(2.0)  
-   
+
+ import time
+ exec(open(r"/mount/src/asnifen/modules/ImportBib.py").read(), globals())
+ time.sleep(2.0)
+
 st.set_page_config(
     page_title="Asfendijarov Kazakh National Medical University «АСНИ-МЕД»",
     page_icon="🧊",
@@ -48,8 +52,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-#path="/mount/src/asnifen/"
-#st.write(path)
+
 Part1 = '''## Краткое описание системы
 
 ### Содержание
