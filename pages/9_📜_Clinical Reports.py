@@ -91,6 +91,10 @@ st.set_page_config(
     }
 )
 
-file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
-execute_python_file1(file_path)
+#file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
+#execute_python_file1(file_path)
 #Rselect_file()
+
+import time
+exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
+time.sleep(2.0)
