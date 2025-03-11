@@ -11,10 +11,10 @@ sys.path.append("/mount/src/asnifen/assets")
 sys.path.append("/mount/src/asnifen/modules")
 sys.path.append("/mount/src/asnifen/modules/programs")
 
-with open("./assets/EDA01.jpg ", "rb") as img_file:    
+with open("/mount/src/asnifen/EDA01.jpg ", "rb") as img_file:    
     img01 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
         
-with open("assets/EDA02.jpg ", "rb") as img_file:    
+with open("/mount/src/asnifen/EDA02.jpg ", "rb") as img_file:    
     img02 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()   
         
 columns=['age', 'operation_year', 'lymph_nodes', 'survival_status']
