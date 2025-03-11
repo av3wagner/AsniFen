@@ -19,8 +19,8 @@ import os
 import subprocess
 
 os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/modules"
-sys.path.append("/mount/src/asnifen/modules/program"                
+sys.path.append("/mount/src/asnifen/modules")
+sys.path.append("/mount/src/asnifen/modules/program")                
 import modules.ReadPath as m
 
 st.set_page_config(
@@ -37,5 +37,5 @@ st.set_page_config(
 )
 
 st.write(sys.path)
-m.show_pdf("./Einleitung.pdf")                
-#m.select_file() 
+#m.show_pdf("./Einleitung.pdf")                
+m.select_file() 
