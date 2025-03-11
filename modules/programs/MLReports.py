@@ -1,7 +1,4 @@
-## Изменения внесены в программу: 19.02.2025
-### Введен блок: def RunML(), который вызывает глобальные библиотеки и функции   
-
-#import streamlit as st  
+import streamlit as st  
 import streamlit.components.v1 as components
 stop=18
 from datetime import datetime
