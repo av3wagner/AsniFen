@@ -652,20 +652,7 @@ with st.expander("Пример проведения исследовательс
         st.pyplot(plt)
                 
     #7 violin plot for age
-    st.markdown("")
-    st.header("Survival Status vs Age")    
-    fig=plt.figure(figsize=(9,5))   
-    sns.violinplot( x='survival_status', y="age", data=data,hue="survival_status") 
-    plt.title("Survival Status vs Age")
-    plt.xlabel("Survival Status")
-    plt.ylabel("Age")
-    #plt.legend(loc="center")
-    plt.legend('')
-    plt.rc('font', size=14)
-    col1, col2, col3,= st.columns([1, 7, 1])
-    with col2:
-        st.pyplot(plt)
-        
+         
     st.markdown("")
     st.header("Survival Status vs Operation Year")    
     fig=plt.figure(figsize=(9,5))    
