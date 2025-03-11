@@ -22,9 +22,9 @@ import time
 exec(open("/mount/src/asnifen/modules/ImportBib.py").read(), globals())
 time.sleep(2.0)
 
-import time
-exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
-time.sleep(2.0)
+#import time
+#exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
+#time.sleep(2.0)
 
 def RunEda():
     import time
