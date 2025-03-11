@@ -6,4 +6,4 @@ matplotlib
 numpy
 pandas
 gunicorn
-matplotlib.pyplot
+#matplotlib.pyplot
