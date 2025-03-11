@@ -26,3 +26,16 @@ import seaborn as sns
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot(plt)
+
+    st.markdown("")
+    st.header("Survival Status vs Operation Year")    
+    fig=plt.figure(figsize=(9,5))    
+    sns.violinplot( x='survival_status', y="operation_year",data=data,hue="survival_status") 
+    plt.title("Survival Status vs Operation Year")
+    plt.xlabel("Survival Status")
+    plt.ylabel("Age")
+    plt.legend('')
+    plt.rc('font', size=14)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot(plt)
