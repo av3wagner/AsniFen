@@ -18,6 +18,10 @@ sys.path.append("/mount/src/asnifen/assets")
 sys.path.append("/mount/src/asnifen/modules")
 sys.path.append("/mount/src/asnifen/modules/programs")
 
+import time
+exec(open(r"/mount/src/asnifen/modules/ImportBib.py").read(), globals())
+time.sleep(2.0)
+
 def RunEda():
     import time
     exec(open(r"/mount/src/asnifen/modules/ImportBib.py").read(), globals())
@@ -38,11 +42,7 @@ def RunEda():
     exec(open(r"/mount/src/asnifen/modules/Reports.py").read(), globals())
     import time
     time.sleep(2.0)  
-
- import time
- exec(open(r"/mount/src/asnifen/modules/ImportBib.py").read(), globals())
- time.sleep(2.0)
-
+ 
 st.set_page_config(
     page_title="Asfendijarov Kazakh National Medical University «АСНИ-МЕД»",
     page_icon="🧊",
