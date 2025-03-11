@@ -10,7 +10,7 @@ import pathlib
 from os import listdir
 from os.path import isfile, join
 import glob
-import gunicorn
+#import gunicorn
 
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
