@@ -96,6 +96,6 @@ st.set_page_config(
 #Rselect_file()
 
 import time
-exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
-#exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
+#exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
+exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
 time.sleep(2.0)
