@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import math
 import random
 import seaborn as sns
-import scikit-plot
+#import scikit-plot
 import warnings
 
 warnings.filterwarnings('ignore')
