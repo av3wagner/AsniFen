@@ -84,10 +84,10 @@ import time
 exec(open(ImportBib).read(), globals())
 time.sleep(2.0)
 
-ConfigINI2025=os.path.join(cwd, "ConfigINI2025.py")
-exec(open(ConfigINI2025).read(), globals())
-import time
-time.sleep(2.0)
+#ConfigINI2025=os.path.join(cwd, "ConfigINI2025.py")
+#exec(open(ConfigINI2025).read(), globals())
+#import time
+#time.sleep(2.0)
 
 AsniDef=os.path.join(cwd, "AsniDef.py")
 exec(open(AsniDef).read(), globals())
@@ -98,34 +98,6 @@ AsNiDefFa2=os.path.join(cwd, "AsNiDefFa2.py")
 exec(open(AsNiDefFa2).read(), globals())
 import time
 time.sleep(2.0)
-
-def RunML():
-    import time
-    #execfile(r"C:\IPYNBgesamt2025\AsFenForum2025\ImportBib.py")
-    exec(open(r"C:\IPYNBgesamt2025\AsFenForum2025\ImportBib.py").read(), globals())
-    time.sleep(2.0)
-
-    #execfile(r"C:\IPYNBgesamt2025\AsFenForum2025\ConfigINI2025.py")
-    exec(open(r"C:\IPYNBgesamt2025\AsFenForum2025\ConfigINI2025.py").read(), globals())
-    import time
-    time.sleep(2.0)
-           
-    #execfile(r"C:\IPYNBgesamt2025\AsFenForum2025\ConfigJson2025.py")
-    #exec(open(r"C:\IPYNBgesamt2025\AsFenForum2025\ConfigJson2025.py").read(), globals())
-    #import time
-    #time.sleep(2.0)
-           
-    #execfile(r"C:\IPYNBgesamt2025\AsFenForum2025\AsniDef.py")
-    exec(open(r"C:\IPYNBgesamt2025\AsFenForum2025\AsniDef.py").read(), globals())
-    import time
-    time.sleep(2.0)
-    
-    #execfile(r"C:\IPYNBgesamt2025\AsFenForum2025\AsNiDefFa2.py")
-    exec(open(r"C:\IPYNBgesamt2025\AsFenForum2025\AsNiDefFa2.py").read(), globals())
-    import time
-    time.sleep(2.0)
-  
-#RunML()
 
 matrix ="data/heard.csv"
 df = pd.read_csv(matrix) 
