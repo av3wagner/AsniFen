@@ -3,4 +3,6 @@ streamlit
 toml
 seaborn
 matplotlib
+numpy
+pandas
 #matplotlib.pyplot
