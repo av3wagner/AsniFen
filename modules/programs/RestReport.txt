@@ -12,6 +12,7 @@ from os.path import isfile, join
 import glob
 import matplotlib.pyplot as plt
 import seaborn as sns
+    #7 violin plot for age
     667 st.markdown("")
     st.header("Survival Status vs Age")    
     fig=plt.figure(figsize=(9,5))   
