@@ -97,7 +97,8 @@ time.sleep(2.0)
 #time.sleep(2.0)
 
 #AsniDef=os.path.join(cwd, "AsniDef.py")
-AsNiDef="/mount/src/asnifen/modules/AsNiDef.py"
+
+AsNiDef="/mount/src/asnifen/modules/programs/AsniDef.py"
 exec(open(AsniDef).read(), globals())
 import time
 time.sleep(2.0)
