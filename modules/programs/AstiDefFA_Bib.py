@@ -28,12 +28,6 @@ from xgboost import plot_importance
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import plotly.express as px
-import plotly.figure_factory as ff
-import plotly.graph_objects as go
-import plotly.io as pio
-import plotly.offline
-import plotly.offline as po
 import random
 import scipy.stats as stats
 import seaborn as sns
@@ -55,7 +49,12 @@ import pandas as pd
 import pathlib
 
 
-
+import plotly.express as px
+import plotly.figure_factory as ff
+import plotly.graph_objects as go
+import plotly.io as pio
+import plotly.offline
+import plotly.offline as po
 import plotly as pl
 import plotly as pplt
 import patchworklib as pw
