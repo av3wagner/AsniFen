@@ -12,8 +12,8 @@ scipy==1.11.4
 xgboost
 lightgbm
 docx
+dash
 
-#dash
 #cufflinks 
 #collections
 #patchworklib
