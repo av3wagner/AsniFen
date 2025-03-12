@@ -36,6 +36,6 @@ st.set_page_config(
     }
 )
 
-st.write(sys.path)
+#st.write(sys.path)
 #m.show_pdf("./Einleitung.pdf")                
 m.select_file() 
