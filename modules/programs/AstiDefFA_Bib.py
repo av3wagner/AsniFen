@@ -25,7 +25,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import plot_tree
 from xgboost import XGBRegressor, XGBClassifier
 from xgboost import plot_importance
-import colorama
 import cufflinks as cf
 import dash
 import matplotlib
@@ -61,6 +60,8 @@ from datetime import timedelta
 import pandas as pd
 import pathlib
 
+
+import colorama
 from termcolor import colored
 from plotly import tools
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
