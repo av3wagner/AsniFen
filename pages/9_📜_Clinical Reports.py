@@ -103,7 +103,7 @@ st.set_page_config(
     }
 )
 
-select_file()
+#select_file()
 #Rselect_file()
 
 #file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
@@ -119,8 +119,8 @@ select_file()
 #extensions = ['py']              
 #import modules.ReadPath as m
 
-#import time
+import time
 #exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
 #exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
-#exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
-#time.sleep(2.0)
+exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
+time.sleep(2.0)
