@@ -23,7 +23,6 @@ from sklearn.svm import SVC
 from sklearn.svm import SVR
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import plot_tree
-from termcolor import colored
 from xgboost import XGBRegressor, XGBClassifier
 from xgboost import plot_importance
 import colorama
@@ -62,6 +61,7 @@ from datetime import timedelta
 import pandas as pd
 import pathlib
 
+from termcolor import colored
 from plotly import tools
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 from plotly.offline import iplot
