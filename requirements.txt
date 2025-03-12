@@ -11,4 +11,22 @@ scikit-plot
 scipy==1.11.4
 xgboost
 lightgbm
-#matplotlib.pyplot
+docx
+dash
+cufflinks 
+colorama
+termcolor
+plotly 
+collections
+patchworklib
+
+#import plotly.express as px
+#import plotly.figure_factory as ff
+#import plotly.graph_objects as go
+#import plotly.io as pio
+#import plotly.offline
+#import plotly.offline as po
+#from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+#from plotly.offline import iplot
+#from plotly.subplots import make_subplots
+#from IPython.core.display import HTML
