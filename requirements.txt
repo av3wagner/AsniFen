@@ -16,7 +16,7 @@ dash
 cufflinks 
 colorama
 termcolor
-plotly 
+plotly == 6.0.0
 collections
 patchworklib
 
