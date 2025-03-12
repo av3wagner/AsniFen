@@ -86,7 +86,7 @@ sys.path.append("/mount/src/asnifen/modules/programs")
 #cwd = "modules" #os.getcwd()
 st.write(sys.path)
 
-ImportBib="/mount/src/asnifen/modules/ImportBib.py")
+ImportBib="/mount/src/asnifen/modules/ImportBib.py"
 import time
 exec(open(ImportBib).read(), globals())
 time.sleep(2.0)
