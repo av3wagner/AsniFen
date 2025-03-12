@@ -51,7 +51,10 @@ def execute_python_file(file_path):
         with open(file_path, 'r', encoding='utf-8') as file:
             python_code = file.read()
             #exec(python_code)
-            exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
+        import time
+        exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
+        time.sleep(2.0)
+        
     except FileNotFoundError:
         st.markdown(f"Error: The file '{file_path}' does not exist.")
 
