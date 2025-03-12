@@ -1,4 +1,4 @@
-A#https://csatlas.com/python-import-file-module/
+#https://csatlas.com/python-import-file-module/
 import streamlit as st  
 import streamlit.components.v1 as components
 from  PIL import Image
