@@ -28,9 +28,6 @@ from xgboost import plot_importance
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
-import plotly as pl
-import plotly as pplt
 import plotly.express as px
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
@@ -58,6 +55,9 @@ import pandas as pd
 import pathlib
 
 
+
+import plotly as pl
+import plotly as pplt
 import patchworklib as pw
 import dash
 import cufflinks as cf
