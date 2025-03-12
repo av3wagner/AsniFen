@@ -84,7 +84,7 @@ sys.path.append("/mount/src/asnifen/modules")
 sys.path.append("/mount/src/asnifen/modules/programs")
 
 #cwd = "modules" #os.getcwd()
-st.write(sys.path)
+#st.write(sys.path)
 
 ImportBib="/mount/src/asnifen/modules/ImportBib.py"
 import time
