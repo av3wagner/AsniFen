@@ -14,15 +14,17 @@ lightgbm
 docx
 dash
 cufflinks 
-colorama
-#termcolor
-#plotly>5.23.0
-#plotly-express >=0.4.0
-#plotly
-#plotly == 5.24.1, 5.23.0
-#plotly==4.14.3
 collections
 patchworklib
+
+#-colorama
+#-termcolor
+#-plotly>5.23.0
+#-plotly-express >=0.4.0
+#-plotly
+#-plotly == 5.24.1, 5.23.0
+#-plotly==4.14.3
+
 
 #import plotly.express as px
 #import plotly.figure_factory as ff
