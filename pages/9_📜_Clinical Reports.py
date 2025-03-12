@@ -67,16 +67,6 @@ def Rselect_file():
                  lines_to_display = f.read()
             st.code(lines_to_display, "python")    
 
-#st.write(sys.path)
-#file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
-#file_path = '/mount/src/asnifen/assets/Einleitung.pdf' 
-#file_path = '/mount/src/asnifen/modules/programs/Einleitung.pdf' 
-#st.write(file_path)
-#show_pdf(file_path)
-#execute_python_file1(file_path)
-#parent_path = '/mount/src/asnifen/modules/programs'
-#extensions = ['py']              
-#import modules.ReadPath as m
 
 st.set_page_config(
     page_title="EDA/ML Reports",
@@ -91,9 +81,20 @@ st.set_page_config(
     }
 )
 
+Rselect_file()
+
 #file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
 #execute_python_file1(file_path)
-#Rselect_file()
+#st.write(sys.path)
+#file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
+#file_path = '/mount/src/asnifen/assets/Einleitung.pdf' 
+#file_path = '/mount/src/asnifen/modules/programs/Einleitung.pdf' 
+#st.write(file_path)
+#show_pdf(file_path)
+#execute_python_file1(file_path)
+#parent_path = '/mount/src/asnifen/modules/programs'
+#extensions = ['py']              
+#import modules.ReadPath as m
 
 #import time
 #exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
