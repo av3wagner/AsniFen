@@ -12,15 +12,15 @@ from os.path import isfile, join
 import glob
 import gunicorn
 
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/assets")
-sys.path.append("/mount/src/asnifen/modules")
-sys.path.append("/mount/src/asnifen/modules/programs")
+#os.chdir("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/assets")
+#sys.path.append("/mount/src/asnifen/modules")
+#sys.path.append("/mount/src/asnifen/modules/programs")
 
-import time
-exec(open("/mount/src/asnifen/modules/ImportBib.py").read(), globals())
-time.sleep(2.0)
+#import time
+#exec(open("/mount/src/asnifen/modules/ImportBib.py").read(), globals())
+#time.sleep(2.0)
 
 #import time
 #exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
