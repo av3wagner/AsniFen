@@ -1,10 +1,6 @@
 from matplotlib import *
 from matplotlib import pyplot as plt
 from matplotlib.colors import ListedColormap
-from plotly import tools
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-from plotly.offline import iplot
-from plotly.subplots import make_subplots
 from sklearn import datasets, linear_model, metrics
 from sklearn import preprocessing
 from sklearn.compose import make_column_transformer
@@ -66,6 +62,10 @@ from datetime import timedelta
 import pandas as pd
 import pathlib
 
+from plotly import tools
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+from plotly.offline import iplot
+from plotly.subplots import make_subplots
 from IPython.core.display import HTML
 from collections import Counter
 from colorama import Fore, Style 
