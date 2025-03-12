@@ -13,7 +13,7 @@ xgboost
 lightgbm
 docx
 dash
-cufflinks 
+#cufflinks 
 collections
 patchworklib
 
