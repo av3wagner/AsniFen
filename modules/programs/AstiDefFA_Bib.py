@@ -40,7 +40,6 @@ import json
 from time import time, strftime, localtime
 from datetime import timedelta
 import shutil
-from docx import Document
 from configparser import ConfigParser
 import configparser
 from time import time, strftime, localtime
@@ -48,7 +47,7 @@ from datetime import timedelta
 import pandas as pd
 import pathlib
 
-
+from docx import Document
 import plotly.express as px
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
