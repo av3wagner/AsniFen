@@ -15,7 +15,7 @@ docx
 dash
 cufflinks 
 colorama
-termcolor
+#termcolor
 #plotly>=5.23.0
 #plotly-express >=0.4.0
 #plotly
