@@ -25,7 +25,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import plot_tree
 from xgboost import XGBRegressor, XGBClassifier
 from xgboost import plot_importance
-import cufflinks as cf
 import dash
 import matplotlib
 import matplotlib.pyplot as plt
@@ -61,6 +60,7 @@ import pandas as pd
 import pathlib
 
 
+import cufflinks as cf
 import colorama
 from termcolor import colored
 from plotly import tools
