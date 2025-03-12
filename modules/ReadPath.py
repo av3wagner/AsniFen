@@ -6,6 +6,7 @@ from os.path import isfile, join
 import pathlib
 import base64
 #from docx import Document
+
 os.chdir("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/")
 sys.path.append("/mount/src/asnifen/assets")
