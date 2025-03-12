@@ -1,6 +1,3 @@
-from IPython.core.display import HTML
-from collections import Counter
-from colorama import Fore, Style 
 from matplotlib import *
 from matplotlib import pyplot as plt
 from matplotlib.colors import ListedColormap
@@ -68,3 +65,7 @@ from time import time, strftime, localtime
 from datetime import timedelta
 import pandas as pd
 import pathlib
+
+from IPython.core.display import HTML
+from collections import Counter
+from colorama import Fore, Style 
