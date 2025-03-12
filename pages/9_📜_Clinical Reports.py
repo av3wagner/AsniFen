@@ -28,7 +28,7 @@ def show_pdf(file_path):
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="1000" height="700" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
-def execute_python_file1(file_path):
+def execute_python_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             python_code = file.read()
@@ -37,7 +37,7 @@ def execute_python_file1(file_path):
         st.markdown(f"Error: The file '{file_path}' does not exist.")
 
 
-def execute_python_file(file_path):
+def execute_python_file2(file_path):
     try:
         completed_process = subprocess.run(['python', file_path], capture_output=True, text=True)
         if completed_process.returncode == 0:
@@ -95,8 +95,8 @@ st.set_page_config(
 #execute_python_file1(file_path)
 #Rselect_file()
 
-import time
+#import time
 #exec(open("/mount/src/asnifen/modules/programs/EDA-Reports.py").read(), globals())
 #exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
-exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
-time.sleep(2.0)
+#exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
+#time.sleep(2.0)
