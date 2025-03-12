@@ -8,7 +8,7 @@ pandas
 gunicorn
 scikit-learn
 scikit-plot
-scipy
+scipy==1.11.4
 xgboost
 lightgbm
 #matplotlib.pyplot
