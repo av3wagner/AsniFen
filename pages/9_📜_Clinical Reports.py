@@ -28,6 +28,24 @@ def show_pdf(file_path):
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="1000" height="700" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
+def select_file():
+    parent_path = 'modules/programs'
+    fileList = []
+    #extensions = ['py']
+    fileList = listdir(parent_path)
+    onlyfiles = [f for f in fileList if isfile(join(parent_path, f)) and  (f.endswith(".py"))]   
+    option = st.selectbox('Выберите программу для EDA/ML-Анализа', onlyfiles)
+    file_location=os.path.join(parent_path, option) 
+    if file_location.find('.py') > 0:
+        st.write(file_location)
+        if st.button('Запустите EDA/ML-программу'):
+            execute_python_file(file_location)
+            
+        if st.button('Покажите EDA/Ml-программу'):    
+            with open(file_location, 'r', encoding='utf-8') as f:
+                 lines_to_display = f.read()
+            st.code(lines_to_display, "python")   
+            
 def execute_python_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
