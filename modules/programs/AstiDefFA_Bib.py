@@ -29,7 +29,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import patchworklib as pw
 import plotly as pl
 import plotly as pplt
 import plotly.express as px
@@ -59,6 +58,7 @@ import pandas as pd
 import pathlib
 
 
+import patchworklib as pw
 import dash
 import cufflinks as cf
 import colorama
