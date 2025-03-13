@@ -170,6 +170,7 @@ if classifier == 'Support Vector Machine (SVM)':
     #plot_metrics('Confusion Matrix')
 
     ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
+    st.pyplot()
     plt.show()
     
     cm = confusion_matrix(y_test, y_pred, labels= model.classes_)
