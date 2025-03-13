@@ -47,7 +47,16 @@ def Rmain():
             plot_precision_recall_curve(model, x_test, y_test)
             st.pyplot()
 Rmain()
-
+def split(df):
+    df1 = pd.get_dummies(df, columns = ['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'ca', 'thal'])
+    standardScalar = StandardScaler()
+    columns_to_scale = ['age', 'trestbps', 'chol', 'thalach', 'oldpeak']
+    df1[columns_to_scale] = standardScalar.fit_transform(df1[columns_to_scale])
+    y = df1.target
+    x = df1.drop(columns = ['target'], axis=1)
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=0)
+    return x_train, x_test, y_train, y_test
+    
 #df = load_data()
 df = pd.read_csv('/mount/src/asnifen/data/heart.csv')
 class_names = ['no', 'yes']
