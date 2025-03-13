@@ -11,9 +11,6 @@ from sklearn.metrics import precision_score, recall_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils.multiclass import unique_labels
 
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/")
-
 def Rmain():
     st.title("Heart Disease Classification")
 
@@ -49,6 +46,7 @@ def Rmain():
             st.subheader('Precision-Recall Curve')
             plot_precision_recall_curve(model, x_test, y_test)
             st.pyplot()
+Rmain()
 
 df = load_data()
 class_names = ['no', 'yes']
@@ -56,22 +54,22 @@ x_train, x_test, y_train, y_test = split(df)
 
 classifier = "Support Vector Machine (SVM)"
 if classifier == 'Support Vector Machine (SVM)':
-        C = 5.0            
-        kernel = "sigmoid" 
-        gamma = "auto"     
-        model = SVC(C=C, kernel=kernel, gamma=gamma)
-        model.fit(x_train, y_train)
-        accuracy = model.score(x_test, y_test)
-        y_pred = model.predict(x_test)
-        st.write("Accuracy: ", accuracy.round(2))
-        st.write("Precision: ", precision_score(y_test, y_pred, labels=class_names).round(2))
-        st.write("Recall: ", recall_score(y_test, y_pred, labels=class_names).round(2))
+    C = 5.0            
+    kernel = "sigmoid" 
+    gamma = "auto"     
+    model = SVC(C=C, kernel=kernel, gamma=gamma)
+    model.fit(x_train, y_train)
+    accuracy = model.score(x_test, y_test)
+    y_pred = model.predict(x_test)
+    st.write("Accuracy: ", accuracy.round(2))
+    st.write("Precision: ", precision_score(y_test, y_pred, labels=class_names).round(2))
+    st.write("Recall: ", recall_score(y_test, y_pred, labels=class_names).round(2))
+      
+    st.write('Confusion Matrix')
+    plot_metrics('Confusion Matrix')
         
-         st.write('Confusion Matrix')
-         plot_metrics('Confusion Matrix')
+    st.write('ROC Curve')
+    plot_metrics('ROC Curve')
         
-         st.write('ROC Curve')
-         plot_metrics('ROC Curve')
-        
-         st.write('Precision-Recall Curve')             
-         plot_metrics('Precision-Recall Curve')
+    st.write('Precision-Recall Curve')             
+    plot_metrics('Precision-Recall Curve')   
