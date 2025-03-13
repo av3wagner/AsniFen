@@ -125,5 +125,5 @@ import time
 #exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
 #exec(open("/mount/src/asnifen/modules/programs/EDAReports.py").read(), globals())
 
-exec(open("/mount/src/asnifen/modules/programs/EDAReports.py").read(), globals())
+exec(open("/mount/src/asnifen/modules/programs/MLKagle.py").read(), globals())
 time.sleep(2.0)
