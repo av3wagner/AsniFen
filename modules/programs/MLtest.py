@@ -180,7 +180,7 @@ if classifier == 'Support Vector Machine (SVM)':
     
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
-        st.pyplot
+        st.pyplot()
         
     #st.pyplot()
     #plt.show()
