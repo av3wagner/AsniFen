@@ -166,20 +166,25 @@ if classifier == 'Support Vector Machine (SVM)':
     #st.write("Precision: ", precision_score(y_test, y_pred, labels=class_names))
     #st.write("Recall: ", recall_score(y_test, y_pred, labels=class_names))
       
-    st.write('Confusion Matrix')
+    #st.write('Confusion Matrix')
+    st.markdown("")
+    col1, col2, col3 = st.columns( [40, 1, 1])
+    with col1:  
+        st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matrix"}</h2>', unsafe_allow_html=True)
+        st.markdown("")
     #plot_metrics('Confusion Matrix')
 
     ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
-    col1, col2, col3,= st.columns([1, 7, 1])
-        with col2:
-            st.pyplot
-    #st.pyplot()
-    #plt.show()
-    
     cm = confusion_matrix(y_test, y_pred, labels= model.classes_)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels= model.classes_)
-    disp.plot()
-    plt.show()
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot
+        
+    #st.pyplot()
+    #plt.show()
+    #disp.plot()
+    #plt.show()
         
     st.write('ROC Curve')
     #plot_metrics('ROC Curve')
