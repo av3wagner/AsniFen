@@ -170,7 +170,7 @@ if classifier == 'Support Vector Machine (SVM)':
     st.markdown("")
     col1, col2, col3 = st.columns( [40, 1, 1])
     with col1:  
-        st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matrix"}</h2>', unsafe_allow_html=True)
+        st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matri для модели: Support Vector Machine (SVM)"}</h2>', unsafe_allow_html=True)
         st.markdown("")
         
     #https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html
