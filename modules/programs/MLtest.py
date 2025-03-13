@@ -166,10 +166,14 @@ if classifier == 'Support Vector Machine (SVM)':
     #st.write("Recall: ", recall_score(y_test, y_pred, labels=class_names))
       
     st.write('Confusion Matrix')
-    plot_metrics('Confusion Matrix')
+    #plot_metrics('Confusion Matrix')
+    cm = confusion_matrix(y_test, y_pred, labels= model.classes_)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm,display_labels= model.classes_)
+    disp.plot()
+    plt.show()
         
     st.write('ROC Curve')
-    plot_metrics('ROC Curve')
+    #plot_metrics('ROC Curve')
         
     st.write('Precision-Recall Curve')             
-    plot_metrics('Precision-Recall Curve')   
+    #plot_metrics('Precision-Recall Curve')   
