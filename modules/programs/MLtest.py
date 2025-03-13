@@ -172,12 +172,10 @@ if classifier == 'Support Vector Machine (SVM)':
     with col1:  
         st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matrix"}</h2>', unsafe_allow_html=True)
         st.markdown("")
-    #plot_metrics('Confusion Matrix')
+        
+    #https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html
 
     ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
-    #cm = confusion_matrix(y_test, y_pred, labels= model.classes_)
-    #disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels= model.classes_)
-    
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot()
