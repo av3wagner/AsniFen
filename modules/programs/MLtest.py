@@ -139,3 +139,25 @@ with col2:
     st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:center">{"Базовая статистическа о данных"}</h2>', unsafe_allow_html=True)
 st.markdown("")
 st.write(test.describe())  
+
+classifier = "Support Vector Machine (SVM)"
+if classifier == 'Support Vector Machine (SVM)':
+    C = 5.0            
+    kernel = "sigmoid" 
+    gamma = "auto"     
+    model = SVC(C=C, kernel=kernel, gamma=gamma)
+    model.fit(X_train, y_train)
+    accuracy = model.score(X_test, y_test)
+    y_pred = model.predict(X_test)
+    st.write("Accuracy: ", accuracy.round(2))
+    st.write("Precision: ", precision_score(y_test, y_pred, labels=class_names).round(2))
+    st.write("Recall: ", recall_score(y_test, y_pred, labels=class_names).round(2))
+      
+    st.write('Confusion Matrix')
+    plot_metrics('Confusion Matrix')
+        
+    st.write('ROC Curve')
+    plot_metrics('ROC Curve')
+        
+    st.write('Precision-Recall Curve')             
+    plot_metrics('Precision-Recall Curve')   
