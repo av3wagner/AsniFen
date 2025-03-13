@@ -48,7 +48,8 @@ def Rmain():
             st.pyplot()
 Rmain()
 
-df = load_data()
+#df = load_data()
+df = pd.read_csv('/mount/src/asnifen/data/heart.csv')
 class_names = ['no', 'yes']
 x_train, x_test, y_train, y_test = split(df)
 
