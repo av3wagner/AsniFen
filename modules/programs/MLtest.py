@@ -86,24 +86,24 @@ def plot_metrics(metrics_list):
 
     if metrics_list == 'Precision-Recall Curve':
         st.subheader('Precision-Recall Curve')
-         plot_precision_recall_curve(model, x_test, y_test)
+        plot_precision_recall_curve(model, x_test, y_test)
         st.pyplot()
 
 today = datetime.date.today()
 year = today.year
 
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/assets")
-sys.path.append("/mount/src/asnifen/modules")
-sys.path.append("/mount/src/asnifen/modules/programs")
+#os.chdir("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/assets")
+#sys.path.append("/mount/src/asnifen/modules")
+#sys.path.append("/mount/src/asnifen/modules/programs")
 
 ImportBib="/mount/src/asnifen/modules/ImportBib.py"
 import time
 exec(open(ImportBib).read(), globals())
 time.sleep(2.0)
+
 matrix ="/mount/src/asnifen/data/heard.csv"
-#matrix ="/mount/src/asnifen/data/heart.csv"
 df = pd.read_csv(matrix) 
 
 df.rename({'Y': 'target'}, axis=1, inplace=True)
