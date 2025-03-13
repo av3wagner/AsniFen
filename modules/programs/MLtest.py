@@ -108,7 +108,7 @@ time.sleep(2.0)
 #import time
 #time.sleep(2.0)
 
-matrix ="'/mount/src/asnifen/data/heart.csv'"
+matrix ="/mount/src/asnifen/data/heart.csv"
 #data = pd.read_csv('/mount/src/asnifen/data/heart.csv')
 df = pd.read_csv(matrix) 
 
