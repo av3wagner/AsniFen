@@ -88,7 +88,7 @@ def plot_metrics(metrics_list):
     if metrics_list == 'Confusion Matrix':
         st.subheader('Confusion Matrix')
         #plot_confusion_matrix(model, X_test, y_test, display_labels=class_names)
-        confusion_matrix(model, X_test, y_test, display_labels=class_names)
+        ConfusionMatrixDisplay(model, X_test, y_test, display_labels=class_names)
         st.pyplot()
 
     if metrics_list == 'ROC Curve':
