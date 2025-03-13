@@ -87,17 +87,17 @@ from sklearn.utils.multiclass import unique_labels
 def plot_metrics(metrics_list):
     if metrics_list == 'Confusion Matrix':
         st.subheader('Confusion Matrix')
-        plot_confusion_matrix(model, x_test, y_test, display_labels=class_names)
+        plot_confusion_matrix(model, X_test, y_test, display_labels=class_names)
         st.pyplot()
 
     if metrics_list == 'ROC Curve':
         st.subheader('ROC Curve')
-        plot_roc_curve(model, x_test, y_test)
+        plot_roc_curve(model, X_test, y_test)
         st.pyplot()
 
     if metrics_list == 'Precision-Recall Curve':
         st.subheader('Precision-Recall Curve')
-        plot_precision_recall_curve(model, x_test, y_test)
+        plot_precision_recall_curve(model, X_test, y_test)
         st.pyplot()
 
 today = datetime.date.today()
