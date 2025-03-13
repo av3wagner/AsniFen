@@ -19,7 +19,7 @@ def main():
 
     @st.cache(persist=True)
     def load_data():
-        data = pd.read_csv('heart.csv')
+        data = pd.read_csv('.data/heart.csv')
         """
         labelencoder = LabelEncoder()
         for col in data.columns:
