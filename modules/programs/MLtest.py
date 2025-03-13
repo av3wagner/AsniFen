@@ -156,7 +156,8 @@ classifier = "Support Vector Machine (SVM)"
 if classifier == 'Support Vector Machine (SVM)':
     C = 5.0            
     kernel = "sigmoid" 
-    gamma = "auto"     
+    gamma = "auto"  
+    clf = SVC(random_state=0)
     model = SVC(C=C, kernel=kernel, gamma=gamma)
     model.fit(X_train, y_train)
     accuracy = model.score(X_test, y_test)
@@ -168,7 +169,7 @@ if classifier == 'Support Vector Machine (SVM)':
     st.write('Confusion Matrix')
     #plot_metrics('Confusion Matrix')
     cm = confusion_matrix(y_test, y_pred, labels= model.classes_)
-    disp = ConfusionMatrixDisplay(confusion_matrix=cm,display_labels= model.classes_)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels= model.classes_)
     disp.plot()
     plt.show()
         
