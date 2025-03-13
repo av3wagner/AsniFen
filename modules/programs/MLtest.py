@@ -87,8 +87,8 @@ ImportBib="/mount/src/asnifen/modules/ImportBib.py"
 import time
 exec(open(ImportBib).read(), globals())
 time.sleep(2.0)
-
-matrix ="/mount/src/asnifen/data/heart.csv"
+matrix ="/mount/src/asnifen/data/heard.csv"
+#matrix ="/mount/src/asnifen/data/heart.csv"
 df = pd.read_csv(matrix) 
 
 df.rename({'Y': 'target'}, axis=1, inplace=True)
