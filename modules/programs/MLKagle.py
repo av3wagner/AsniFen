@@ -59,6 +59,7 @@ def split(df):
     
 #df = load_data()
 df = pd.read_csv('/mount/src/asnifen/data/heart.csv')
+st.dataframe(df)  
 class_names = ['no', 'yes']
 x_train, x_test, y_train, y_test = split(df)
 
