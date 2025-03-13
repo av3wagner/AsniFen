@@ -1,4 +1,3 @@
-#https://csatlas.com/python-import-file-module/
 import streamlit as st  
 import streamlit.components.v1 as components
 from  PIL import Image
@@ -103,9 +102,13 @@ st.set_page_config(
     }
 )
 
+import time
+exec(open("/mount/src/asnifen/modules/programs/MLtest.py").read(), globals())
+time.sleep(2.0)
+
+#https://csatlas.com/python-import-file-module/
 #select_file()
 #Rselect_file()
-
 #file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
 #execute_python_file1(file_path)
 #st.write(sys.path)
@@ -118,11 +121,8 @@ st.set_page_config(
 #parent_path = '/mount/src/asnifen/modules/programs'
 #extensions = ['py']              
 #import modules.ReadPath as m
-
-import time
-exec(open("/mount/src/asnifen/modules/programs/MLtest.py").read(), globals())
 #exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
 #exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
 #exec(open("/mount/src/asnifen/modules/programs/EDAReports.py").read(), globals())
 #exec(open("/mount/src/asnifen/modules/programs/MLKagle.py").read(), globals())
-time.sleep(2.0)
+
