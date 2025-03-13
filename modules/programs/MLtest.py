@@ -108,7 +108,8 @@ exec(open(AsNiDefFa2).read(), globals())
 import time
 time.sleep(2.0)
 
-matrix ="data/heard.csv"
+matrix ="'/mount/src/asnifen/data/heart.csv'"
+#data = pd.read_csv('/mount/src/asnifen/data/heart.csv')
 df = pd.read_csv(matrix) 
 
 df.rename({'Y': 'target'}, axis=1, inplace=True)
