@@ -123,5 +123,4 @@ col1, col2, col3 = st.columns( [1, 40, 1])
 with col2:  
     st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:center">{"Базовая статистическа о данных"}</h2>', unsafe_allow_html=True)
 st.markdown("")
-
 st.write(test.describe())  
