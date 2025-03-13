@@ -83,33 +83,12 @@ sys.path.append("/mount/src/asnifen/assets")
 sys.path.append("/mount/src/asnifen/modules")
 sys.path.append("/mount/src/asnifen/modules/programs")
 
-#cwd = "modules" #os.getcwd()
-#st.write(sys.path)
-
 ImportBib="/mount/src/asnifen/modules/ImportBib.py"
 import time
 exec(open(ImportBib).read(), globals())
 time.sleep(2.0)
 
-#ConfigINI2025=os.path.join(cwd, "ConfigINI2025.py")
-#exec(open(ConfigINI2025).read(), globals())
-#import time
-#time.sleep(2.0)
-
-#AsniDef=os.path.join(cwd, "AsniDef.py")
-#AsNiDef="/mount/src/asnifen/modules/programs/AsniDef.py"
-#exec(open("/mount/src/asnifen/modules/programs/AsniDef.py").read(), globals())
-#import time
-#time.sleep(2.0)
-
-#AsNiDefFa2=os.path.join(cwd, "AsNiDefFa2.py")
-#AsNiDefFa2="/mount/src/asnifen/modules/AsNiDefFa2.py"
-#exec(open(AsNiDefFa2).read(), globals())
-#import time
-#time.sleep(2.0)
-
 matrix ="/mount/src/asnifen/data/heart.csv"
-#data = pd.read_csv('/mount/src/asnifen/data/heart.csv')
 df = pd.read_csv(matrix) 
 
 df.rename({'Y': 'target'}, axis=1, inplace=True)
