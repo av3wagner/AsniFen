@@ -14,13 +14,13 @@ from sklearn.utils.multiclass import unique_labels
 def Rmain():
     st.title("Heart Disease Classification")
 
-    @st.cache(persist=True)
+    #@st.cache(persist=True)
     def load_data():
         data = pd.read_csv('/mount/src/asnifen/data/heart.csv')
         return data
 
 
-    @st.cache(persist=True)
+    #@st.cache(persist=True)
     def split(df):
         df1 = pd.get_dummies(df, columns = ['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'ca', 'thal'])
         standardScalar = StandardScaler()
