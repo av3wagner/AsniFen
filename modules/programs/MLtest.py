@@ -98,15 +98,15 @@ time.sleep(2.0)
 
 #AsniDef=os.path.join(cwd, "AsniDef.py")
 #AsNiDef="/mount/src/asnifen/modules/programs/AsniDef.py"
-exec(open("/mount/src/asnifen/modules/programs/AsniDef.py").read(), globals())
-import time
-time.sleep(2.0)
+#exec(open("/mount/src/asnifen/modules/programs/AsniDef.py").read(), globals())
+#import time
+#time.sleep(2.0)
 
 #AsNiDefFa2=os.path.join(cwd, "AsNiDefFa2.py")
-AsNiDefFa2="/mount/src/asnifen/modules/AsNiDefFa2.py"
-exec(open(AsNiDefFa2).read(), globals())
-import time
-time.sleep(2.0)
+#AsNiDefFa2="/mount/src/asnifen/modules/AsNiDefFa2.py"
+#exec(open(AsNiDefFa2).read(), globals())
+#import time
+#time.sleep(2.0)
 
 matrix ="'/mount/src/asnifen/data/heart.csv'"
 #data = pd.read_csv('/mount/src/asnifen/data/heart.csv')
