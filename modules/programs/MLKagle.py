@@ -11,6 +11,9 @@ from sklearn.metrics import precision_score, recall_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils.multiclass import unique_labels
 
+os.chdir("/mount/src/asnifen/")
+sys.path.append("/mount/src/asnifen/")
+
 def main():
     st.title("Heart Disease Classification")
     #st.sidebar.title("Heart Disease Classification")
@@ -19,7 +22,7 @@ def main():
 
     @st.cache(persist=True)
     def load_data():
-        data = pd.read_csv('./data/heart.csv')
+        data = pd.read_csv('/mount/src/asnifen/data/heart.csv')
         """
         labelencoder = LabelEncoder()
         for col in data.columns:
