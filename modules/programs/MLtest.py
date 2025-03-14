@@ -55,9 +55,8 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 # ensemble
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, ExtraTreesClassifier 
 from sklearn.ensemble import BaggingClassifier, AdaBoostClassifier, VotingClassifier
-
 from sklearn.metrics import roc_auc_score
-#from scikitplot.metrics import plot_roc_curve
+
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 from sklearn.metrics import RocCurveDisplay, roc_curve
 from sklearn.metrics import PrecisionRecallDisplay, precision_recall_curve
@@ -65,8 +64,6 @@ from sklearn import metrics
 from sklearn.metrics import f1_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score, classification_report,f1_score,confusion_matrix,precision_score,recall_score,balanced_accuracy_score
-#from sklearn.metrics import precision_score, recall_score
-#from sklearn.metrics import (brier_score_loss, precision_score, recall_score,f1_score)
 import os, sys, inspect, time, datetime
 import subprocess
 import json
@@ -79,11 +76,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-#from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
 from sklearn.metrics import PrecisionRecallDisplay
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils.multiclass import unique_labels
 
+#from scikitplot.metrics import plot_roc_curve
+#from sklearn.metrics import precision_score, recall_score
+#from sklearn.metrics import (brier_score_loss, precision_score, recall_score,f1_score)
+#from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
 
 def plot_metrics(metrics_list):
     if metrics_list == 'Confusion Matrix':
