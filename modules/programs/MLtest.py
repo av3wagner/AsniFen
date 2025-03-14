@@ -184,14 +184,17 @@ if classifier == 'Support Vector Machine (SVM)':
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot() 
-
-classifier = "Support Vector Machine (SVM)"
-if classifier == 'Support Vector Machine (SVM)':
-    C = 5.0            
+        
+classifier = "Logistic Regression"
+if classifier == 'Logistic Regression':
+    C = 5.0           
+    max_iter = 200 
     kernel = "sigmoid" 
     gamma = "auto"  
     clf = SVC(random_state=0)
     model = SVC(C=C, kernel=kernel, gamma=gamma)
+
+
     model.fit(X_train, y_train)
     accuracy = model.score(X_test, y_test)
     y_pred = model.predict(X_test)
