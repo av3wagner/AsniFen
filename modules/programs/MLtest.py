@@ -65,7 +65,8 @@ from sklearn import metrics
 from sklearn.metrics import f1_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score, classification_report,f1_score,confusion_matrix,precision_score,recall_score,balanced_accuracy_score
-
+#from sklearn.metrics import precision_score, recall_score
+#from sklearn.metrics import (brier_score_loss, precision_score, recall_score,f1_score)
 import os, sys, inspect, time, datetime
 import subprocess
 import json
@@ -80,7 +81,6 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 #from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
 from sklearn.metrics import PrecisionRecallDisplay
-from sklearn.metrics import precision_score, recall_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils.multiclass import unique_labels
 
@@ -210,9 +210,9 @@ if classifier == 'Logistic Regression':
         st.pyplot()
                
     st.subheader('ROC Curve')
-    model = SVC(C=C, kernel=kernel, gamma=gamma)
-    model.fit(X_train, y_train)
-    y_pred = model.decision_function(X_test)
+    #model = SVC(C=C, kernel=kernel, gamma=gamma)
+    #model.fit(X_train, y_train)
+    #y_pred = model.decision_function(X_test)
     RocCurveDisplay.from_predictions(y_test, y_pred)
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
@@ -220,6 +220,7 @@ if classifier == 'Logistic Regression':
 
     st.subheader('Precision-Recall Curve')
     PrecisionRecallDisplay.from_predictions(y_test, y_pred)
+    #PrecisionRecallDisplay.from_estimator(model, X_test, y_test)      
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot() 
