@@ -181,8 +181,7 @@ if classifier == 'Support Vector Machine (SVM)':
         st.pyplot()    
 
     st.subheader('Precision-Recall Curve')
-    display = PrecisionRecallDisplay.from_estimator(model, X_test, y_test, name="LinearSVC", plot_chance_level=True, despine=True)
-    _ = display.ax_.set_title("2-class Precision-Recall curve")
-     col1, col2, col3,= st.columns([1, 7, 1])
+    PrecisionRecallDisplay.from_predictions(y_test, y_pred)
+    col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot() 
