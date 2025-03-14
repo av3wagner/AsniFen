@@ -159,6 +159,7 @@ if classifier == 'Support Vector Machine (SVM)':
     accuracy = model.score(X_test, y_test)
     y_pred = model.predict(X_test)
     st.write("Accuracy: ", accuracy)
+    
     #st.write("Precision: ", precision_score(y_test, y_pred, labels=class_names))
     #st.write("Precision: ", precision_score(y_test, y_pred)
     #st.write("Recall: ", recall_score(y_test, y_pred) #, labels=class_names))
