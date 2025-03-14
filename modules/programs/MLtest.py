@@ -60,7 +60,6 @@ from sklearn.metrics import roc_auc_score
 #from scikitplot.metrics import plot_roc_curve
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 from sklearn.metrics import RocCurveDisplay, roc_curve
-#from sklearn.metrics import RocCurveDisplay
 from sklearn.metrics import PrecisionRecallDisplay, precision_recall_curve
 from sklearn import metrics
 from sklearn.metrics import f1_score
@@ -80,6 +79,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 #from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
+from sklearn.metrics import PrecisionRecallDisplay
 from sklearn.metrics import precision_score, recall_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils.multiclass import unique_labels
@@ -170,16 +170,19 @@ if classifier == 'Support Vector Machine (SVM)':
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot()
-            
-    st.write('ROC Curve')
-    st.write('Precision-Recall Curve')             
+               
     st.subheader('ROC Curve')
-    clf = SVC(random_state=0).fit(X_train, y_train)
     model = SVC(C=C, kernel=kernel, gamma=gamma)
     model.fit(X_train, y_train)
     y_pred = model.decision_function(X_test)
     RocCurveDisplay.from_predictions(y_test, y_pred)
-    #plot_roc_curve(model, X_test, y_test)
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot()    
+
+    st.subheader('Precision-Recall Curve')
+    display = PrecisionRecallDisplay.from_estimator(model, X_test, y_test, name="LinearSVC", plot_chance_level=True, despine=True)
+    _ = display.ax_.set_title("2-class Precision-Recall curve")
+     col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot() 
