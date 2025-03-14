@@ -210,16 +210,15 @@ if classifier == "Logistic Regression":
     with col2:
         st.pyplot()
                
-    #st.subheader('ROC Curve')
-    #RocCurveDisplay.from_predictions(y_test, y_pred)
-    #col1, col2, col3,= st.columns([1, 7, 1])
-    #with col2:
-    #    st.pyplot()    
+    st.subheader('ROC Curve')
+    RocCurveDisplay.from_predictions(y_test, y_pred)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot()    
 
-    #st.subheader('Precision-Recall Curve')
-    #PrecisionRecallDisplay.from_predictions(y_test, y_pred)
-    #PrecisionRecallDisplay.from_estimator(model, X_test, y_test)      
-    #col1, col2, col3,= st.columns([1, 7, 1])
-    #with col2:
-    #    st.pyplot() 
-
+    st.subheader('Precision-Recall Curve')
+    PrecisionRecallDisplay.from_predictions(y_test, y_pred)
+    PrecisionRecallDisplay.from_estimator(model, X_test, y_test)      
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot() 
