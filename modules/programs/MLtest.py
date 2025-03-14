@@ -104,12 +104,6 @@ def plot_metrics(metrics_list):
 today = datetime.date.today()
 year = today.year
 
-#os.chdir("/mount/src/asnifen/")
-#sys.path.append("/mount/src/asnifen/")
-#sys.path.append("/mount/src/asnifen/assets")
-#sys.path.append("/mount/src/asnifen/modules")
-#sys.path.append("/mount/src/asnifen/modules/programs")
-
 ImportBib="/mount/src/asnifen/modules/ImportBib.py"
 import time
 exec(open(ImportBib).read(), globals())
@@ -179,14 +173,11 @@ if classifier == 'Support Vector Machine (SVM)':
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot()
-        
-    #st.pyplot()
-    #plt.show()
-    #disp.plot()
-    #plt.show()
-        
+            
     st.write('ROC Curve')
-    #plot_metrics('ROC Curve')
-        
     st.write('Precision-Recall Curve')             
-    #plot_metrics('Precision-Recall Curve')   
+    st.subheader('ROC Curve')
+    plot_roc_curve(model, X_test, y_test)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot()    
