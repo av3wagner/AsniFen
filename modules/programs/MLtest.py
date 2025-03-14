@@ -160,8 +160,8 @@ if classifier == 'Support Vector Machine (SVM)':
     y_pred = model.predict(X_test)
     st.write("Accuracy: ", accuracy)
     #st.write("Precision: ", precision_score(y_test, y_pred, labels=class_names))
-    st.write("Precision: ", precision_score(y_test, y_pred, average=None)
-    st.write("Recall: ", recall_score(y_test, y_pred, labels=class_names))
+    st.write("Precision: ", precision_score(y_test, y_pred)
+    st.write("Recall: ", recall_score(y_test, y_pred) #, labels=class_names))
 
     st.markdown("")
     col1, col2, col3 = st.columns( [40, 1, 1])
