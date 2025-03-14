@@ -235,7 +235,7 @@ if classifier == 'Random Forest':
     y_pred = model.predict(X_test)
     st.write("Accuracy: ", accuracy)   
 
-     st.markdown("")
+    st.markdown("")
     col1, col2, col3 = st.columns( [40, 1, 1])
     with col1:  
         st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matri для модели: Random Forest"}</h2>', unsafe_allow_html=True)
