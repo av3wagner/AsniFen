@@ -216,6 +216,7 @@ if classifier == "Logistic Regression":
     with col2:
         st.pyplot()    
 
+    #https://runebook.dev/en/docs/scikit_learn/modules/generated/sklearn.metrics.precisionrecalldisplay
     st.subheader('Precision-Recall Curve')
     PrecisionRecallDisplay.from_predictions(y_test, y_pred)
     PrecisionRecallDisplay.from_estimator(model, X_test, y_test)      
