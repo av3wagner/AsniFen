@@ -231,6 +231,6 @@ if classifier == 'Random Forest':
     bootstrap = 'True' #'False'
     model = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth) #, bootstrap=bootstrap) #, n_jobs=-1)
     model.fit(X_train, y_train)
-    #accuracy = model.score(X_test, y_test)
-    #y_pred = model.predict(X_test)
-    #st.write("Accuracy: ", accuracy)            
+    accuracy = model.score(X_test, y_test)
+    y_pred = model.predict(X_test)
+    st.write("Accuracy: ", accuracy)            
