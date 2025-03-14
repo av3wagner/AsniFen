@@ -60,6 +60,7 @@ from sklearn.metrics import roc_auc_score
 #from scikitplot.metrics import plot_roc_curve
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 from sklearn.metrics import RocCurveDisplay, roc_curve
+#from sklearn.metrics import RocCurveDisplay
 from sklearn.metrics import PrecisionRecallDisplay, precision_recall_curve
 from sklearn import metrics
 from sklearn.metrics import f1_score
@@ -157,10 +158,6 @@ if classifier == 'Support Vector Machine (SVM)':
     accuracy = model.score(X_test, y_test)
     y_pred = model.predict(X_test)
     st.write("Accuracy: ", accuracy)
-    #st.write("Precision: ", precision_score(y_test, y_pred, labels=class_names))
-    #st.write("Recall: ", recall_score(y_test, y_pred, labels=class_names))
-      
-    #st.write('Confusion Matrix')
     st.markdown("")
     col1, col2, col3 = st.columns( [40, 1, 1])
     with col1:  
@@ -177,7 +174,12 @@ if classifier == 'Support Vector Machine (SVM)':
     st.write('ROC Curve')
     st.write('Precision-Recall Curve')             
     st.subheader('ROC Curve')
-    plot_roc_curve(model, X_test, y_test)
+    clf = SVC(random_state=0).fit(X_train, y_train)
+    model = SVC(C=C, kernel=kernel, gamma=gamma)
+    model.fit(X_train, y_train)
+    y_pred = model.decision_function(X_test)
+    RocCurveDisplay.from_predictions(y_test, y_pred)
+    #plot_roc_curve(model, X_test, y_test)
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot()    
