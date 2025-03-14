@@ -147,6 +147,7 @@ with col2:
 st.markdown("")
 st.write(test.describe())  
 
+#https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html
 classifier = "Support Vector Machine (SVM)"
 if classifier == 'Support Vector Machine (SVM)':
     C = 5.0            
@@ -163,9 +164,7 @@ if classifier == 'Support Vector Machine (SVM)':
     with col1:  
         st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matri для модели: Support Vector Machine (SVM)"}</h2>', unsafe_allow_html=True)
         st.markdown("")
-        
-    #https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html
-
+    
     ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
@@ -185,3 +184,41 @@ if classifier == 'Support Vector Machine (SVM)':
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
         st.pyplot() 
+
+classifier = "Support Vector Machine (SVM)"
+if classifier == 'Support Vector Machine (SVM)':
+    C = 5.0            
+    kernel = "sigmoid" 
+    gamma = "auto"  
+    clf = SVC(random_state=0)
+    model = SVC(C=C, kernel=kernel, gamma=gamma)
+    model.fit(X_train, y_train)
+    accuracy = model.score(X_test, y_test)
+    y_pred = model.predict(X_test)
+    st.write("Accuracy: ", accuracy)
+    st.markdown("")
+    col1, col2, col3 = st.columns( [40, 1, 1])
+    with col1:  
+        st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matri для модели: Support Vector Machine (SVM)"}</h2>', unsafe_allow_html=True)
+        st.markdown("")
+    
+    ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot()
+               
+    st.subheader('ROC Curve')
+    model = SVC(C=C, kernel=kernel, gamma=gamma)
+    model.fit(X_train, y_train)
+    y_pred = model.decision_function(X_test)
+    RocCurveDisplay.from_predictions(y_test, y_pred)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot()    
+
+    st.subheader('Precision-Recall Curve')
+    PrecisionRecallDisplay.from_predictions(y_test, y_pred)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot() 
+
