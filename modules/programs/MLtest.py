@@ -233,4 +233,28 @@ if classifier == 'Random Forest':
     model.fit(X_train, y_train)
     accuracy = model.score(X_test, y_test)
     y_pred = model.predict(X_test)
-    st.write("Accuracy: ", accuracy)            
+    st.write("Accuracy: ", accuracy)   
+
+     st.markdown("")
+    col1, col2, col3 = st.columns( [40, 1, 1])
+    with col1:  
+        st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matri для модели: Random Forest"}</h2>', unsafe_allow_html=True)
+        st.markdown("")
+    
+    ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot()
+               
+    st.subheader('ROC Curve')
+    RocCurveDisplay.from_predictions(y_test, y_pred)
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot()    
+   
+    st.subheader('Precision-Recall Curve')
+    PrecisionRecallDisplay.from_predictions(y_test, y_pred)
+    PrecisionRecallDisplay.from_estimator(model, X_test, y_test)      
+    col1, col2, col3,= st.columns([1, 7, 1])
+    with col2:
+        st.pyplot() 
