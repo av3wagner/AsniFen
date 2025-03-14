@@ -190,7 +190,7 @@ if classifier == 'Support Vector Machine (SVM)':
         st.pyplot() 
         
 classifier = "Logistic Regression"
-if classifier == 'Logistic Regression':
+if classifier == "Logistic Regression":
     C = 5.0           
     max_iter = 200 
     model = LogisticRegression(C=C, penalty='l2', max_iter=max_iter)
@@ -204,10 +204,10 @@ if classifier == 'Logistic Regression':
         st.markdown(f'<h2 style="color:yellow;font-size:24px;text-align:left">{"Confusion Matri для модели: Logistic Regression"}</h2>', unsafe_allow_html=True)
         st.markdown("")
     
-    ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
-    col1, col2, col3,= st.columns([1, 7, 1])
-    with col2:
-        st.pyplot()
+    #ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
+    #col1, col2, col3,= st.columns([1, 7, 1])
+    #with col2:
+    #    st.pyplot()
                
     #st.subheader('ROC Curve')
     #RocCurveDisplay.from_predictions(y_test, y_pred)
