@@ -189,7 +189,7 @@ if classifier == 'Support Vector Machine (SVM)':
     with col2:
         st.pyplot() 
         
-classifier = "Logistic Regression"
+classifier = "Logistic RegressionStart"
 if classifier == "Logistic Regression":
     C = 5.0           
     max_iter = 200 
