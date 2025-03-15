@@ -5,13 +5,12 @@ from os import listdir
 from os.path import isfile, join
 import pathlib
 import base64
-#from docx import Document
 
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/assets")
-sys.path.append("/mount/src/asnifen/modules")
-sys.path.append("/mount/src/asnifen/modules/programs")
+#os.chdir("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/assets")
+#sys.path.append("/mount/src/asnifen/modules")
+#sys.path.append("/mount/src/asnifen/modules/programs")
 
 def show_pdf(file_path):
     st.title('✨ Визуализация PDF документа 📜')
@@ -38,11 +37,9 @@ def execute_python_file_New(file_path):
     except FileNotFoundError:
         st.markdown(f"Error: The file '{file_path}' does not exist.")
 
-
 def select_file():
     parent_path = 'modules/programs'
     fileList = []
-    #extensions = ['py']
     fileList = listdir(parent_path)
     onlyfiles = [f for f in fileList if isfile(join(parent_path, f)) and  (f.endswith(".py"))]   
     option = st.selectbox('Выберите программу для EDA/ML-Анализа', onlyfiles)
@@ -68,8 +65,6 @@ def open_file_selection_doc():
     
     if file_location.find('.pdf') > 0:
          if st.button('Покажите Документ'):    
-            #st.write(file_location) 
-            #with st.expander("1. PDF Документ", expanded=True):
             show_pdf(file_location)
       
     elif file_location.find('.docx') > 0:
@@ -78,11 +73,8 @@ def open_file_selection_doc():
             doc = Document(file_location)
             all_paras = doc.paragraphs
             for para in all_paras:
-                #print(para.text)   
-                #st.code(para.text, "python")
                 st.write(para.text) 
-    
-            
+             
 def open_file_selection_doc2():
     parent_path = '/mount/src/asnifen/assets'
     fileList = []
@@ -134,13 +126,3 @@ def open_test():
                 print(para.text)
         else:
             print("Can't read files with extension {} for file {}".format(extension, filename)) 
-
-#fm="/mount/src/asnifen/modules/programs/MLReports.py"
-#st.write(fm)
-#import time
-#exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
-#time.sleep(2.0)
-
-#EDA-Reports=os.path.join(cwd, "modules/programs/EDA-Reports.py")
-#print(EDA-Reports)
-#exec(open(EDA-Reports).read(), globals())
