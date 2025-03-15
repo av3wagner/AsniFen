@@ -18,9 +18,9 @@ import glob
 import os
 import subprocess
 
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/modules")
-sys.path.append("/mount/src/asnifen/modules/program")                
+#os.chdir("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/modules")
+#sys.path.append("/mount/src/asnifen/modules/program")                
 import modules.ReadPath as m
 
 st.set_page_config(
