@@ -1,4 +1,3 @@
-#st.dataframe(data.head())
 import streamlit as st  
 import streamlit.components.v1 as components
 from  PIL import Image
@@ -489,7 +488,6 @@ with st.expander("Пример проведения исследовательс
         st.pyplot(fig2)  
        
     st.markdown("")
-        
     st.markdown(Part6)
     st.markdown("")
     
@@ -515,7 +513,6 @@ with st.expander("Пример проведения исследовательс
     #### histogram for lymph_nodes
     st.header("Histogram for Lymph Nodes")    
     fig=plt.figure(figsize=(9,3))
-    #,height=5
     fig4=(sns.FacetGrid(data,hue="survival_status")    \
              .map(sns.distplot,"lymph_nodes"))
     plt.title("Histogram for Lymph Nodes")
@@ -527,12 +524,10 @@ with st.expander("Пример проведения исследовательс
     with col2:
         st.pyplot(fig4)
     st.markdown("")
-    
     st.markdown("")
     st.markdown(Part8)
     st.markdown("")
-    
-    
+      
     #1 plotting the PDF and CDF for age
     st.markdown("")
     st.header("Plotting the PDF and CDF for age")    
@@ -608,7 +603,6 @@ with st.expander("Пример проведения исследовательс
     plt.title("Survival Status vs Age")    
     plt.ylabel("Age")
     plt.xlabel("Survival Status")
-    #plt.legend(loc="center")
     plt.legend('')
     plt.rc('font', size=14)
     col1, col2, col3,= st.columns([1, 7, 1])
@@ -678,8 +672,7 @@ with st.expander("Пример проведения исследовательс
     st.markdown("")
     st.header("Survival Status vs Lymph Nodes")
     fig=plt.figure(figsize=(9,5))
-    #f=sns.violinplot( x='survival_status', y="lymph_nodes", data=data, hue="survival_status", scale='width', height=5, aspect=2)
-    f = sns.violinplot(data=data, x="survival_status", y="lymph_nodes", native_scale=True, inner='quartile', dodge=False) #, height=5, aspect=2)
+    f = sns.violinplot(data=data, x="survival_status", y="lymph_nodes", native_scale=True, inner='quartile', dodge=False) 
     plt.title("Survival Status vs Lymph Nodes")
     plt.xlabel("Survival Status")
     plt.ylabel("lymph nodes")
@@ -696,8 +689,4 @@ with st.expander("Пример проведения исследовательс
     g=sns.catplot(x="age", y="lymph_nodes", data=data, kind="bar", height=5, aspect=2)
     col1, col2, col3,= st.columns([1, 7, 1])
     with col2:
-        st.pyplot(g)   
-
-        
-
-    
+        st.pyplot(g)        
