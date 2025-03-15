@@ -80,11 +80,6 @@ from sklearn.metrics import PrecisionRecallDisplay
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils.multiclass import unique_labels
 
-#from scikitplot.metrics import plot_roc_curve
-#from sklearn.metrics import precision_score, recall_score
-#from sklearn.metrics import (brier_score_loss, precision_score, recall_score,f1_score)
-#from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
-
 def plot_metrics(metrics_list):
     if metrics_list == 'Confusion Matrix':
         st.subheader('Confusion Matrix')
@@ -105,10 +100,10 @@ def plot_metrics(metrics_list):
 today = datetime.date.today()
 year = today.year
 
-ImportBib="/mount/src/asnifen/modules/ImportBib.py"
-import time
-exec(open(ImportBib).read(), globals())
-time.sleep(2.0)
+#ImportBib="/mount/src/asnifen/modules/ImportBib.py"
+#import time
+#exec(open(ImportBib).read(), globals())
+#time.sleep(2.0)
 
 matrix ="/mount/src/asnifen/data/heard.csv"
 df = pd.read_csv(matrix) 
