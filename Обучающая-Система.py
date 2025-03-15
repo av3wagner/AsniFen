@@ -12,20 +12,6 @@ from os.path import isfile, join
 import glob
 import gunicorn
 
-#os.chdir("/mount/src/asnifen/")
-#sys.path.append("/mount/src/asnifen/")
-#sys.path.append("/mount/src/asnifen/assets")
-#sys.path.append("/mount/src/asnifen/modules")
-#sys.path.append("/mount/src/asnifen/modules/programs")
-
-#import time
-#exec(open("/mount/src/asnifen/modules/ImportBib.py").read(), globals())
-#time.sleep(2.0)
-
-#import time
-#exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
-#time.sleep(2.0)
-
 def RunEda():
     import time
     exec(open(r"/mount/src/asnifen/modules/ImportBib.py").read(), globals())
@@ -189,7 +175,7 @@ __*Материалы этого проекта могут служить хор
 
 __Берлин, 16\.02\.2025__
 '''
-######################################
+
 with open("./WagnerFoto.jpg", "rb") as img_file:    
     img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 	
