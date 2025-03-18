@@ -13,14 +13,14 @@ import glob
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-with open("/mount/src/asnifen/assets/EDA01.jpg", "rb") as img_file:    
+with open("./EDA01.jpg", "rb") as img_file:    
         img01 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
         
-with open("/mount/src/asnifen/assets/EDA02.jpg", "rb") as img_file:    
+with open("./EDA02.jpg", "rb") as img_file:    
         img02 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()   
         
 columns=['age', 'operation_year', 'lymph_nodes', 'survival_status']
-data=pd.read_csv("/mount/src/asnifen/data/haberman.csv",names=columns)
+data=pd.read_csv("./data/haberman.csv",names=columns)
     
 def change_param(x):
     if(x==1):
