@@ -6,12 +6,6 @@ from os.path import isfile, join
 import pathlib
 import base64
 
-#os.chdir("/mount/src/asnifen/")
-#sys.path.append("/mount/src/asnifen/")
-#sys.path.append("/mount/src/asnifen/assets")
-#sys.path.append("/mount/src/asnifen/modules")
-#sys.path.append("/mount/src/asnifen/modules/programs")
-
 def show_pdf(file_path):
     st.title('✨ Визуализация PDF документа 📜')
     st.markdown("")
