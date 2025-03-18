@@ -83,7 +83,6 @@ from sklearn.utils.multiclass import unique_labels
 def plot_metrics(metrics_list):
     if metrics_list == 'Confusion Matrix':
         st.subheader('Confusion Matrix')
-        #plot_confusion_matrix(model, X_test, y_test, display_labels=class_names)
         ConfusionMatrixDisplay(model, X_test, y_test, display_labels=class_names)
         st.pyplot()
 
@@ -100,12 +99,7 @@ def plot_metrics(metrics_list):
 today = datetime.date.today()
 year = today.year
 
-#ImportBib="/mount/src/asnifen/modules/ImportBib.py"
-#import time
-#exec(open(ImportBib).read(), globals())
-#time.sleep(2.0)
-
-matrix ="/mount/src/asnifen/data/heard.csv"
+matrix ="./data/heard.csv"
 df = pd.read_csv(matrix) 
 
 df.rename({'Y': 'target'}, axis=1, inplace=True)
