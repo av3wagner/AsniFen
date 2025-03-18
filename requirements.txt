@@ -13,6 +13,7 @@ xgboost
 lightgbm
 docx
 dash
+pip
 
 #cufflinks 
 #collections
