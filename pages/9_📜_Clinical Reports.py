@@ -13,11 +13,11 @@ import glob
 import os, sys
 import subprocess
 
-os.chdir("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/")
-sys.path.append("/mount/src/asnifen/assets")
-sys.path.append("/mount/src/asnifen/modules")
-sys.path.append("/mount/src/asnifen/modules/programs") 
+#os.chdir("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/")
+#sys.path.append("/mount/src/asnifen/assets")
+#sys.path.append("/mount/src/asnifen/modules")
+#sys.path.append("/mount/src/asnifen/modules/programs") 
 
 def show_pdf(file_path):
     st.title('✨ Визуализация PDF документа 📜')
@@ -30,7 +30,6 @@ def show_pdf(file_path):
 def select_file():
     parent_path = 'modules/programs'
     fileList = []
-    #extensions = ['py']
     fileList = listdir(parent_path)
     onlyfiles = [f for f in fileList if isfile(join(parent_path, f)) and  (f.endswith(".py"))]   
     option = st.selectbox('Выберите программу для EDA/ML-Анализа', onlyfiles)
@@ -105,26 +104,3 @@ st.set_page_config(
 import time
 exec(open("/mount/src/asnifen/modules/programs/MLtest.py").read(), globals())
 st.write('Ende Programm!')
-#???
-#time.sleep(2.0)
-
-#https://csatlas.com/python-import-file-module/
-#select_file()
-#Rselect_file()
-#file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
-#execute_python_file1(file_path)
-#st.write(sys.path)
-#file_path = '/mount/src/asnifen/modules/programs/Reports.py' 
-#file_path = '/mount/src/asnifen/assets/Einleitung.pdf' 
-#file_path = '/mount/src/asnifen/modules/programs/Einleitung.pdf' 
-#st.write(file_path)
-#show_pdf(file_path)
-#execute_python_file1(file_path)
-#parent_path = '/mount/src/asnifen/modules/programs'
-#extensions = ['py']              
-#import modules.ReadPath as m
-#exec(open("/mount/src/asnifen/modules/programs/Reports.py").read(), globals())
-#exec(open("/mount/src/asnifen/modules/programs/MLReports.py").read(), globals())
-#exec(open("/mount/src/asnifen/modules/programs/EDAReports.py").read(), globals())
-#exec(open("/mount/src/asnifen/modules/programs/MLKagle.py").read(), globals())
-
