@@ -25,8 +25,8 @@ st.set_page_config(
     }
 )
 #cwd = os.getcwd('/mount/src/asnifen') 
-cwd = os.chdir('https://raw.githubusercontent.com/av3wagner/AsniFen/main')
-st.write(cwd)
+#cwd = os.chdir('https://raw.githubusercontent.com/av3wagner/AsniFen/main')
+#st.write(cwd)
 
 Part1 = '''## Краткое описание системы
 
@@ -159,10 +159,10 @@ __*Материалы этого проекта могут служить хор
 __Берлин, 16\.02\.2025__
 '''
 
-with open("WagnerFoto.jpg", "rb") as img_file:    
+with open("'https://raw.githubusercontent.com/av3wagner/AsniFen/main'/WagnerFoto.jpg", "rb") as img_file:    
     img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 	
-with open("ASFEN_LOGO3.jpg", "rb") as img_file:
+with open("'https://raw.githubusercontent.com/av3wagner/AsniFen/main'/ASFEN_LOGO3.jpg", "rb") as img_file:
     img2 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()        
 
 def MdFileToStreamlit(MdFile):
