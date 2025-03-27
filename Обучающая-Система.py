@@ -25,7 +25,7 @@ st.set_page_config(
     }
 )
 #cwd = os.getcwd('/mount/src/asnifen') 
-cwd = os.chdir('/mount/src/asnifen')
+cwd = os.chdir('https://raw.githubusercontent.com/av3wagner/AsniFen/main')
 st.write(cwd)
 
 Part1 = '''## Краткое описание системы
