@@ -154,12 +154,7 @@ __*Материалы этого проекта могут служить хор
 
 __Берлин, 16\.02\.2025__
 '''
-
-with open("./WagnerFoto.jpg", "rb") as img_file:    
-    img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
-	
-with open("./ASFEN_LOGO3.jpg", "rb") as img_file:
-    img2 = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()        
+    
 
 def MdFileToStreamlit(MdFile):
     with open(MdFile, 'r', encoding='utf-8') as f:
@@ -217,25 +212,7 @@ def welcome():
       
     with col1:              
         st.markdown("")
-    with col2:  
-        st.write(f"""
-        <div class="container">
-            <div class="box">
-                <div class="spin-container">
-                    <div class="shape">
-                        <div class="bd">
-                            <img src="{img}" alt="AW" width="150" height="200" style="display: block; margin: auto">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        """, 
-        unsafe_allow_html=True)
-                
-        st.markdown("")
-        MdFileToStreamlit("./AWresume.md")
-        
+           
     with col3:              
         st.markdown(""" <style> .font {
         font-size:10px ; font-family: 'Cooper Black'; color: #FF9633;} 
@@ -251,21 +228,8 @@ with col2:
     st.markdown(f'<h2 style="color:white;font-size:24px;text-align:center">{"Система для любознательных и настойчивых"}</h2>', unsafe_allow_html=True)
     
     st.markdown("")
-      
-    st.write(f"""
-            <div class="container">
-                <div class="box">
-                    <div class="spin-container">
-                        <div class="shape">
-                            <div class="bd">
-                                <img src="{img2}" alt="AW" width="600" height="400" style="display: block; margin: auto">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            """, 
-    unsafe_allow_html=True)
+    
+    
     st.title("Добро пожаловать в АСНИ-Обучение!")
     st.markdown("""
         АСНИ-Обучение - это система с открытым исходным кодом, помогающее пользователям применять избранные методы машинного обучения
@@ -290,10 +254,7 @@ with st.expander("2. Собрание избранных статей из об�
     ''')
     
     col1, col2, col3 = st.columns( [1, 40, 1])
-    with col2:  
-        st.markdown("")
-        MdFileToStreamlit("./ArtikelList.md")
-
+   
 with st.expander("3. Информиация об авторе АСНИ-МЕД"):
     welcome()
 
