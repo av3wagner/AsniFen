@@ -24,6 +24,9 @@ st.set_page_config(
     }
 )
 
+cwd = os.getcwd()  
+st.write(cwd)
+
 Part1 = '''## Краткое описание системы
 
 ### Содержание
