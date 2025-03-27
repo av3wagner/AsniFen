@@ -11,7 +11,7 @@ from os import listdir
 from os.path import isfile, join
 import glob
 import gunicorn
-path = '/mount/src/asnifen
+path = '/mount/src/asnifen'
 #/assets'
 st.set_page_config(
     page_title="Asfendijarov Kazakh National Medical University «АСНИ-МЕД»",
@@ -24,6 +24,8 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
+cwd = os.getcwd() 
+st.write(cwd)
 
 Part1 = '''## Краткое описание системы
 
