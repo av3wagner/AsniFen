@@ -24,7 +24,8 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-cwd = os.getcwd('/mount/src/asnifen') 
+#cwd = os.getcwd('/mount/src/asnifen') 
+cwd = os.chdir('/mount/src/asnifen')
 st.write(cwd)
 
 Part1 = '''## Краткое описание системы
